@@ -2,6 +2,10 @@ site_name: The Couple Notebook
 site_description: A notebook for couples to share their thoughts and memories
 site_author: Carla
 
+repo_name: ccarlaa/the-couple-notebook
+repo_url: https://github.com/ccarlaa/the-couple-notebook
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   custom_dir: overrides
