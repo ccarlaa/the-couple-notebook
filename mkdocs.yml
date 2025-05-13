@@ -19,6 +19,7 @@ theme:
     - navigation.footer
     - navigation.instant
     - navigation.top
+    - content.code.annotate
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -48,6 +49,8 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
   - mdx_math
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -61,4 +64,9 @@ extra_javascript:
 
 nav:
   - Home: index.md
+  - Matemática: 
+    - Conceitos Gerais:
+      - Conjuntos: matematica/conceitos-gerais/conjuntos.md
+      - Espaços:   matematica/conceitos-gerais/espacos.md
+    - Álgebra Linear: matematica/ial.md
   - About: about.md
