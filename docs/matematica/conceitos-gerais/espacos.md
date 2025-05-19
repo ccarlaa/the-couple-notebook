@@ -13,7 +13,7 @@
 
 Um **espaço métrico** é uma estrutura fundamental na Análise e na Topologia em que se quantifica a “distância” entre pares de pontos. Formalmente, consiste de um par $(X,d)$ onde:
 
-1. **Conjunto de pontos**
+**1. Conjunto de pontos**
 
    $$
      X\neq\varnothing
@@ -21,7 +21,7 @@ Um **espaço métrico** é uma estrutura fundamental na Análise e na Topologia 
 
    é um conjunto arbitrário (pode ser finito ou infinito).
 
-2. **Métrica**
+**2. Métrica**
 
    $$
      d : X \times X \;\to\; \mathbb{R}
@@ -31,37 +31,25 @@ Um **espaço métrico** é uma estrutura fundamental na Análise e na Topologia 
 
 ---
 
-### Axiomas da Métrica
+### 1. Axiomas da Métrica
 
 Para todo $x,y,z\in X$, a função $d$ deve satisfazer:
 
-1. **Positividade**
+1. **Positividade**:
+   $d(x,y)\;\ge\;0.$
 
-   $$
-     d(x,y)\;\ge\;0.
-   $$
+2. **Identidade dos indiscerníveis**:
+   $d(x,y)=0 \;\iff\; x=y.$
 
-2. **Identidade dos indiscerníveis**
+3. **Simetria**:
+   $d(x,y)=d(y,x)$
 
-   $$
-     d(x,y)=0 \;\iff\; x=y.
-   $$
-
-3. **Simetria**
-
-   $$
-     d(x,y)=d(y,x).
-   $$
-
-4. **Desigualdade triangular**
-
-   $$
-     d(x,z)\;\le\;d(x,y)+d(y,z).
-   $$
+4. **Desigualdade triangular**:
+   $d(x,z)\;\le\;d(x,y)+d(y,z)$
 
 ---
 
-### Propriedades e Construções Induzidas
+### 2. Propriedades e Construções Induzidas
 
 * **Bolas abertas e fechadas**
 
@@ -91,7 +79,7 @@ Um **espaço vetorial** (também chamado de **espaço linear**) é uma estrutura
 
 ---
 
-### **Definição Formal**
+### **1. Definição Formal**
 
 Um **espaço vetorial** é um par $(V, \mathbb{K})$, onde:
 
@@ -100,15 +88,15 @@ Um **espaço vetorial** é um par $(V, \mathbb{K})$, onde:
 * estão definidas duas operações:
 
   1. **Adição de vetores**:
-     $+\colon V \times V \to V$, \quad $(u,v) \mapsto u + v$
+     $+\colon V \times V \to V, \quad (u,v) \mapsto u + v$
   2. **Multiplicação por escalar**:
-     $\cdot\colon \mathbb{K} \times V \to V$, \quad $(\alpha, v) \mapsto \alpha v$
+     $\cdot\colon \mathbb{K} \times V \to V, \quad (\alpha, v) \mapsto \alpha v$
 
 essas operações devem satisfazer os **oito axiomas** abaixo:
 
 ---
 
-### **Axiomas dos Espaços Vetoriais**
+### **2. Axiomas dos Espaços Vetoriais**
 
 Para todos $u, v, w \in V$ e $\alpha, \beta \in \mathbb{K}$:
 
@@ -138,7 +126,7 @@ Para todos $u, v, w \in V$ e $\alpha, \beta \in \mathbb{K}$:
 
 ---
 
-### **Exemplos de Espaços Vetoriais**
+### **3. Exemplos de Espaços Vetoriais**
 
 1. $\mathbb{R}^n$ com adição e multiplicação escalar usuais.
 2. O conjunto de todas as funções contínuas $f : \mathbb{R} \to \mathbb{R}$.
@@ -148,23 +136,13 @@ Para todos $u, v, w \in V$ e $\alpha, \beta \in \mathbb{K}$:
 
 ---
 
-### **Conceitos Relacionados**
+### **4. Conceitos Relacionados**
 
 * **Subespaço vetorial**: subconjunto de $V$ que é ele próprio um espaço vetorial.
 * **Base**: conjunto de vetores linearmente independentes que gera $V$.
 * **Dimensão**: número de vetores em qualquer base de $V$.
 * **Dependência linear**: relação não trivial entre vetores pela combinação linear.
 * **Transformações lineares**: funções entre espaços vetoriais que preservam a estrutura (i.e., lineares).
-
----
-
-### **Usos**
-
-* **Geometria e Física**: representação de forças, deslocamentos, etc.
-* **Álgebra Linear**: resolução de sistemas lineares, mudança de base.
-* **Ciência de Dados e IA**: vetores de características, embeddings, PCA.
-* **Análise Funcional**: espaços de funções, espaços de Hilbert e Banach.
-* **Computação Gráfica**: manipulação de imagens, rotação e translação de objetos.
 
 ---
 
