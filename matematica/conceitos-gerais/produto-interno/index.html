@@ -13,26 +13,26 @@
       
       
       
-        <link rel="prev" href="../conceitos-gerais/espacos/">
+        <link rel="prev" href="../produto-cartesiano/">
       
       
-        <link rel="next" href="../../about/">
+        <link rel="next" href="../cauchy-sequence/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
-        <title>Álgebra Linear - The Couple Notebook</title>
+        <title>Produto Interno - The Couple Notebook</title>
       
     
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35e1ed30.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -55,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -83,6 +83,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#produto-interno" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,7 +100,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="The Couple Notebook" class="md-header__button md-logo" aria-label="The Couple Notebook" data-md-component="logo">
+    <a href="../../.." title="The Couple Notebook" class="md-header__button md-logo" aria-label="The Couple Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -115,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Álgebra Linear
+              Produto Interno
             
           </span>
         </div>
@@ -213,7 +218,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -242,7 +247,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../conceitos-gerais/conjuntos/" class="md-tabs__link">
+        <a href="../conjuntos/" class="md-tabs__link">
           
   
   Matemática
@@ -261,7 +266,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/" class="md-tabs__link">
+      <a href="../../../about/" class="md-tabs__link">
         
   
     
@@ -303,7 +308,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="The Couple Notebook" class="md-nav__button md-logo" aria-label="The Couple Notebook" data-md-component="logo">
+    <a href="../../.." title="The Couple Notebook" class="md-nav__button md-logo" aria-label="The Couple Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -332,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -390,18 +395,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -415,7 +422,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Conceitos Gerais
@@ -428,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conceitos-gerais/conjuntos/" class="md-nav__link">
+      <a href="../conjuntos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -448,11 +455,246 @@
   
   
     <li class="md-nav__item">
-      <a href="../conceitos-gerais/espacos/" class="md-nav__link">
+      <a href="../composicao-interna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Composição Interna
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grupo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grupo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../corpo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Corpo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../espacos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Espaços
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../produto-cartesiano/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Produto Cartesiano
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Produto Interno
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Produto Interno
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-contexto" class="md-nav__link">
+    1. Contexto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-definicao" class="md-nav__link">
+    2. Definição
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-construcoes-induzidas" class="md-nav__link">
+    3. Construções Induzidas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-exemplos-canonicos" class="md-nav__link">
+    4. Exemplos Canônicos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espaco-vetorial-euclidiano" class="md-nav__link">
+    Espaço Vetorial Euclidiano
+  </a>
+  
+    <nav class="md-nav" aria-label="Espaço Vetorial Euclidiano">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicao" class="md-nav__link">
+    Definição
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-canonico" class="md-nav__link">
+    Exemplo Canônico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cauchy-sequence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequência de Cauchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../polinomios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Polinômios
   </span>
   
 
@@ -474,24 +716,80 @@
                 
   
   
+  
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
         
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Álgebra Linear
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Álgebra Linear
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ial/norma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Norma
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ial/espaco-hilbertiano/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Espaço Hilbertiano
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -511,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -542,9 +840,145 @@
   
 
 
-  <h1>Álgebra Linear</h1>
-
-
+<h1 id="produto-interno">Produto Interno</h1>
+<p>A <strong>produto interno</strong> (ou <strong>forma bilinear positiva definida</strong>, no caso real) é uma operação que, a cada par de vetores num espaço vetorial, associa um número escalar de modo a generalizar as noções de “comprimento” e “ângulo”. A seguir, a definição completa em notação formal.</p>
+<hr />
+<h2 id="1-contexto">1. Contexto</h2>
+<p>Seja <span class="arithmatex">\(V\)</span> um espaço vetorial sobre um corpo <span class="arithmatex">\(\mathbb{K}\)</span>, onde:</p>
+<ul>
+<li><span class="arithmatex">\(\mathbb{K} = \mathbb{R}\)</span> (caso real) ou <span class="arithmatex">\(\mathbb{K} = \mathbb{C}\)</span> (caso complexo);</li>
+<li>
+<p>As operações em <span class="arithmatex">\(V\)</span> são:</p>
+</li>
+<li>
+<p>adição: <span class="arithmatex">\(+\colon V\times V\to V\)</span>;</p>
+</li>
+<li>multiplicação escalar: <span class="arithmatex">\(\cdot\colon \mathbb{K}\times V\to V\)</span>.</li>
+</ul>
+<hr />
+<h2 id="2-definicao">2. Definição</h2>
+<p>Um <strong>produto interno</strong> em <span class="arithmatex">\(V\)</span> é uma aplicação</p>
+<div class="arithmatex">\[
+\langle \,\cdot\,,\,\cdot\,\rangle \colon V \times V \;\longrightarrow\; \mathbb{K}
+\]</div>
+<p>tal que, para todos <span class="arithmatex">\(u,v,w\in V\)</span> e todo escalar <span class="arithmatex">\(\alpha\in\mathbb{K}\)</span>, valem as seguintes propriedades:</p>
+<ol>
+<li><strong>(Conjugado-simetria)</strong></li>
+</ol>
+<p>
+<script type="math/tex; mode=display">
+     \langle u, v \rangle
+     = \overline{\langle v, u \rangle}
+     \quad
+     (\text{se }\mathbb{K}=\mathbb{C})
+     \quad\text{ou}\quad
+     \langle u, v \rangle = \langle v, u \rangle
+     \quad
+     (\mathbb{K}=\mathbb{R}).
+   </script>
+</p>
+<ol>
+<li><strong>(Linearidade no primeiro argumento)</strong></li>
+</ol>
+<p>
+<script type="math/tex; mode=display">
+     \langle \alpha u + v,\;w\rangle
+     = \alpha\,\langle u,w\rangle \;+\;\langle v,w\rangle.
+   </script>
+</p>
+<ol>
+<li><strong>(Positividade)</strong></li>
+</ol>
+<p>
+<script type="math/tex; mode=display">
+     \langle v, v \rangle \;>\; 0
+     \quad\text{para todo }v\neq 0,
+     \quad\text{e}\quad
+     \langle v,v\rangle = 0 \iff v=0.
+   </script>
+</p>
+<blockquote>
+<p>Quando <span class="arithmatex">\(\mathbb{K}=\mathbb{C}\)</span>, diz‑se normalmente que o produto interno é <strong>sesquilinear</strong> (linear num argumento e conjugado‑linear no outro) e <strong>definido positivo</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="3-construcoes-induzidas">3. Construções Induzidas</h2>
+<p>Dado <span class="arithmatex">\(\langle\cdot,\cdot\rangle\)</span>, definimos:</p>
+<ul>
+<li><strong>Norma</strong></li>
+</ul>
+<p>
+<script type="math/tex; mode=display">
+    \|v\| \;=\;\sqrt{\langle v, v\rangle}.
+  </script>
+</p>
+<ul>
+<li><strong>Distância</strong></li>
+</ul>
+<p>
+<script type="math/tex; mode=display">
+    d(u,v) \;=\;\|u - v\|.
+  </script>
+</p>
+<ul>
+<li><strong>Ângulo</strong></li>
+</ul>
+<p>
+<script type="math/tex; mode=display">
+    \cos\theta
+    = \frac{\Re\,\langle u,v\rangle}{\|u\|\;\|v\|},
+  </script>
+</p>
+<p>onde <span class="arithmatex">\(\Re\)</span> é a parte real (no caso complexo).</p>
+<hr />
+<h2 id="4-exemplos-canonicos">4. Exemplos Canônicos</h2>
+<ol>
+<li>
+<p><strong><span class="arithmatex">\(\mathbb{R}^n\)</span> real</strong>
+   <span class="arithmatex">\(\displaystyle \langle u,v\rangle = \sum_{i=1}^n u_i\,v_i.\)</span></p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(\mathbb{C}^n\)</span> complexo</strong>
+   <span class="arithmatex">\(\displaystyle \langle u,v\rangle = \sum_{i=1}^n u_i\,\overline{v_i}.\)</span></p>
+</li>
+<li>
+<p><strong>Espaço de funções</strong>
+   Em <span class="arithmatex">\(C[a,b]\)</span>,
+   <span class="arithmatex">\(\displaystyle \langle f,g\rangle = \int_a^b f(x)\,\overline{g(x)}\,dx.\)</span></p>
+</li>
+</ol>
+<hr />
+<h2 id="espaco-vetorial-euclidiano"><strong>Espaço Vetorial Euclidiano</strong></h2>
+<p>Um <strong>espaço vetorial euclidiano</strong> é um espaço vetorial real de dimensão finita no qual é definido um <strong>produto interno</strong>. Isso permite medir <strong>distâncias, ângulos, comprimentos</strong> e realizar a <strong>geometria analítica</strong> com base vetorial.</p>
+<hr />
+<h3 id="definicao"><strong>Definição</strong></h3>
+<p>Um <strong>espaço vetorial euclidiano</strong> é um par <span class="arithmatex">\((V, \langle \cdot,\cdot \rangle)\)</span>, onde:</p>
+<ul>
+<li><span class="arithmatex">\(V\)</span> é um espaço vetorial real de dimensão finita;</li>
+<li><span class="arithmatex">\(\langle \cdot,\cdot \rangle\)</span> é um produto interno definido em <span class="arithmatex">\(V\)</span>.</li>
+</ul>
+<p>Esse produto interno permite definir:</p>
+<ul>
+<li>
+<p><strong>Norma</strong> (comprimento):
+  <span class="arithmatex">\(\|v\| = \sqrt{\langle v, v \rangle}\)</span></p>
+</li>
+<li>
+<p><strong>Distância</strong> entre vetores:
+  <span class="arithmatex">\(d(u, v) = \|u - v\|\)</span></p>
+</li>
+<li>
+<p><strong>Ângulo</strong> entre vetores:
+  <span class="arithmatex">\(\cos \theta = \dfrac{\langle u, v \rangle}{\|u\| \cdot \|v\|}\)</span></p>
+</li>
+</ul>
+<hr />
+<h3 id="exemplo-canonico"><strong>Exemplo Canônico</strong></h3>
+<p>O espaço <span class="arithmatex">\(\mathbb{R}^n\)</span>, com o produto interno padrão:</p>
+<div class="arithmatex">\[
+\langle u, v \rangle = \sum_{i=1}^{n} u_i v_i
+\]</div>
+<p>é o exemplo mais comum de espaço vetorial euclidiano.</p>
+<hr />
 
 
 
@@ -572,7 +1006,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../conceitos-gerais/espacos/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Espaços">
+          <a href="../produto-cartesiano/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Produto Cartesiano">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -582,20 +1016,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Espaços
+                Produto Cartesiano
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../about/" class="md-footer__link md-footer__link--next" aria-label="Next: About">
+          <a href="../cauchy-sequence/" class="md-footer__link md-footer__link--next" aria-label="Next: Sequência de Cauchy">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                About
+                Sequência de Cauchy
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -646,10 +1080,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "toc.follow", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "navigation.instant", "navigation.top", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["toc.integrate", "toc.follow", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "navigation.instant", "navigation.top", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
