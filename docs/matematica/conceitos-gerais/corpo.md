@@ -1,56 +1,73 @@
 # Corpo
 
-Um **corpo** (do latim *corpus*, em inglês *field*) é uma estrutura algébrica fundamental que generaliza as propriedades dos números racionais $\mathbb{Q}$, reais $\mathbb{R}$ e complexos $\mathbb{C}$, permitindo as operações de adição, subtração, multiplicação e divisão (exceto por zero), obedecendo certos axiomas.
+## Definição Formal
+
+Seja $K$ um conjunto não vazio com duas leis de composição interna:
+
+* **adição**: $+ : K \times K \to K$,
+* **multiplicação**: $\cdot : K \times K \to K$.
+
+Chamamos $(K, +, \cdot)$ de um **corpo** (ou **field**, em inglês) se as seguintes propriedades forem satisfeitas:
 
 ---
 
-## **Definição Formal**
+## Propriedades:
 
-Um **corpo** é um conjunto não vazio $\mathbb{K}$ munido de duas operações binárias:
+### 1. Soma:
 
-* **Adição**: $(a,b) \mapsto a + b$
-* **Multiplicação**: $(a,b) \mapsto a \cdot b$
+$(K, +)$ é um **grupo abeliano**
 
-tais que os seguintes **axiomas** são satisfeitos para todos $a, b, c \in \mathbb{K}$:
-
----
-
-## **Axiomas dos Corpos**
-
-### **1. Axiomas da adição:**
-
-1. (Associatividade) $(a + b) + c = a + (b + c)$
-2. (Comutatividade) $a + b = b + a$
-3. (Elemento neutro aditivo) Existe $0 \in \mathbb{K}$ tal que $a + 0 = a$
-4. (Inverso aditivo) Para todo $a$, existe $(-a)$ tal que $a + (-a) = 0$
-
-### **2. Axiomas da multiplicação:**
-
-5. (Associatividade) $(a \cdot b) \cdot c = a \cdot (b \cdot c)$
-6. (Comutatividade) $a \cdot b = b \cdot a$
-7. (Elemento neutro multiplicativo) Existe $1 \in \mathbb{K}$, com $1 \ne 0$, tal que $a \cdot 1 = a$
-8. (Inverso multiplicativo) Para todo $a \ne 0$, existe $a^{-1}$ tal que $a \cdot a^{-1} = 1$
-
-### **3. Distributividade entre as operações:**
-
-9. (Distributividade) $a \cdot (b + c) = a \cdot b + a \cdot c$
+* **Associatividade**: $\forall a,b,c\in K,\; (a+b)+c = a+(b+c)$,
+* **Elemento neutro aditivo**: $\exists 0\in K,\; \forall a\in K,\; a+0 = 0+a = a$,
+* **Inverso aditivo**: $\forall a\in K,\; \exists -a\in K,\; a + (-a) = 0$,
+* **Comutatividade**: $\forall a,b\in K,\; a+b = b+a$.
 
 ---
 
-## **Exemplos de Corpos**
+### 2. Multiplicação:
 
-* $\mathbb{Q}$: corpo dos números racionais
-* $\mathbb{R}$: corpo dos números reais
-* $\mathbb{C}$: corpo dos números complexos
+$(K^*, \cdot)$ é um **grupo abeliano**, onde $K^* = K \setminus \{0\}$
+
+* **Associatividade**: $\forall a,b,c\in K^*,\; (a\cdot b)\cdot c = a\cdot(b\cdot c)$,
+* **Elemento neutro multiplicativo**: $\exists 1\in K,\; 1\ne 0,\; \forall a\in K,\; a\cdot 1 = 1\cdot a = a$,
+* **Inverso multiplicativo**: $\forall a\in K^*,\; \exists a^{-1}\in K,\; a\cdot a^{-1} = 1$,
+* **Comutatividade**: $\forall a,b\in K^*,\; a\cdot b = b\cdot a$.
 
 ---
 
-## **Observações Importantes**
+### 3. **Distributividade**:
 
-* Em um corpo, **todo elemento diferente de zero tem inverso multiplicativo**.
-* Um corpo **não admite divisão por zero**, pois $0^{-1}$ não está definido.
-* Um corpo com número finito de elementos é chamado de **corpo finito** ou **corpo de Galois**.
+$$
+\forall a,b,c\in K,\quad a\cdot(b+c) = a\cdot b + a\cdot c.
+$$
 
-## **Resumo**
+---
 
-> Um **corpo** é um conjunto onde se pode **somar, subtrair, multiplicar e dividir** (exceto por zero), de maneira que essas operações obedeçam regras semelhantes às dos números reais.
+### Corpo vs Corpo Comutativo
+
+Na definição moderna, **todo corpo já é comutativo** na multiplicação. Portanto, a expressão "corpo comutativo" é redundante na maioria das abordagens contemporâneas.
+
+Porém, em abordagens mais antigas (ou em generalizações), distinguem-se:
+
+* **Corpo (field)**: Multiplicação **comutativa** — padrão.
+* **Corpo não comutativo** (ou **"divisão não comutativa"**, ou **"anel de divisão"**): Multiplicação **não necessariamente comutativa** — ex.: os **quaternions** $\mathbb{H}$.
+
+---
+
+### Exemplos
+
+1. **Corpo dos números racionais**: $\mathbb{Q}$
+   Com as operações usuais de $+$ e $\cdot$, é um corpo.
+
+2. **Corpo dos números reais**: $\mathbb{R}$
+
+3. **Corpo dos números complexos**: $\mathbb{C}$
+
+4. **Corpo finito**:
+   $$
+   \mathbb{F}_p = \mathbb{Z}/p\mathbb{Z}
+   $$
+   onde $p$ é primo — corpo com $p$ elementos.
+
+5. **Não é corpo**:
+   $\mathbb{Z}$ (os inteiros) **não formam um corpo**, pois nem todo elemento diferente de zero possui inverso multiplicativo em $\mathbb{Z}$.

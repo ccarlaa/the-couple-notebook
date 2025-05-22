@@ -1,6 +1,6 @@
 # Polinômios formais
 
-Seja $K$ um corpo e seja $X$ um símbolo («indeterminada»). Definimos o anel dos **polinômios formais** em $X$ sobre $K$, denotado $K[X]$, como segue:
+Seja $K$ um corpo. Definimos o anel dos **polinômios formais** $K[x]$ em uma **indeterminação** $x$ com coeficientes em $K$ como:
 
 ---
 
@@ -10,24 +10,24 @@ $$
 K[X]
 :=
 \Bigl\{\,a = (a_i)_{i\in\mathbb{N}}\in K^{\mathbb{N}}
-  \;\Big|\;\exists N\in\mathbb{N}\;\forall i > N:\;a_i=0
+  \;\Big|\;\exists k\in\mathbb{N}\;\forall i > k:\;a_i=0
 \Bigr\}.
 $$
 
 Cada $a = (a_0,a_1,\dots)$ corresponde ao polinômio formal
 
 $$
-a(X) \;=\;\sum_{i=0}^{\infty} a_i\,X^i
+a(x) \;=\;\sum_{i=0}^{\infty} a_i\,x^i
 $$
 
 onde, por hipótese de suporte finito, essa soma é na prática finita.
 
 ---
 
-## 2. Operações em $K[X]$
+## 2. Operações em $K[x]$
 
 1. **Adição**
-    Dados $a=(a_i)$ e $b=(b_i)$ em $K[X]$, define‑se
+    Dados $a=(a_i)$ e $b=(b_i)$ em $K[x]$, define‑se
 
     $$
     a + b \;=\;(a_i + b_i)_{\,i\in\mathbb{N}}.
@@ -46,9 +46,9 @@ onde, por hipótese de suporte finito, essa soma é na prática finita.
     Em notação de soma finita,
 
     $$
-    (a\cdot b)(X)
+    (a\cdot b)(x)
     = 
-    \sum_{i=0}^{\infty} \biggl(\sum_{j+k=i}a_j\,b_k\biggr)\,X^i.
+    \sum_{i=0}^{\infty} \biggl(\sum_{j+k=i}a_j\,b_k\biggr)\,x^i.
     $$
 
 3. **Elemento neutro**
@@ -72,27 +72,30 @@ $$
 
 ## 4. Identificação usual
 
-Pode‑se escrever cada $a\in K[X]$ como
+Pode‑se escrever cada $a\in K[x]$ como
 
 $$
-a(X)
+a(x)
 \;=\;
-\sum_{i=0}^{n}a_i\,X^i,
+\sum_{i=0}^{n}a_i\,x^i,
 $$
 
 onde $n = \deg(a)$.
-
-Em particular, o monômio $X$ corresponde à sequência
-$\displaystyle X = (0,1,0,0,\dots)$.
 
 ---
 
 ## 5. Propriedades
 
-* $(K[X],+,\cdot)$ é um **anel comutativo** com unidade.
-* Como $K$ é corpo, $K[X]$ é um **domínio de integridade**.
-* A unidade e o monômio $X$ geram livremente $K[X]$ como álgebra sobre $K$.
+* $(K[x],+,\cdot)$ é um **anel comutativo** com unidade.
+* Como $K$ é corpo, $K[x]$ é um **domínio de integridade**.
+* A unidade e o monômio $x$ geram livremente $K[x]$ como álgebra sobre $K$.
+
+## 5. Exemplos
+
+- O monômio $x$ corresponde à sequência
+$\displaystyle X = (0,1,0,0,\dots)$.
+- $x + 1$ correnponde a $\displaystyle X = (1,1,0,0,\dots)$.
 
 ---
 
-Em resumo, $K[X]$ é o conjunto de somas finitas $\sum a_iX^i$ com $a_i\in K$, dotado de adição coeficiente a coeficiente e de multiplicação por convolução de coeficientes.
+Em resumo, $K[x]$ é o conjunto de somas finitas $\sum a_ix^i$ com $a_i\in K$, dotado de adição coeficiente a coeficiente e de multiplicação por convolução de coeficientes.

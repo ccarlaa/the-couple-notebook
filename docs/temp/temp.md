@@ -1,151 +1,42 @@
-**Resumo (explicação simples)**
+O **Teorema Fundamental da Álgebra** afirma que:
 
-* **Conjuntos** são coleções bem definidas de objetos (chamados *elementos*). Ex.: o conjunto dos números inteiros, o conjunto das cores primárias.
-* **Lógica** é o estudo de proposições (sentenças que podem ser verdadeiras ou falsas) e das regras que permitem formar argumentos válidos. Ex.: “Se chove, então a rua fica molhada”; “Não (P e Q) é equivalente a (¬P) ou (¬Q)”.
+> Todo polinômio não constante de uma variável com coeficientes complexos possui pelo menos uma raiz complexa.([Wikipedia][1])
 
----
+Em outras palavras, o corpo dos números complexos é **algebricamente fechado**, o que significa que qualquer equação polinomial de grau $n \geq 1$ com coeficientes em $\mathbb{C}$ tem exatamente $n$ raízes complexas, contando multiplicidades.([Wikipedia][2])
 
-## 1. Teoria de Conjuntos (ZF)
+### Enunciado Formal
 
-**Linguagem**:
-
-* Símbolo único de predicado binário:
-
-  $$
-    L_{\in} = \{\;\in\;\}.
-  $$
-
-**Termos**:
+Seja $p(z)$ um polinômio de grau $n \geq 1$ com coeficientes complexos:
 
 $$
-  t ::= x \quad(x\text{ variável}).
+p(z) = a_n z^n + a_{n-1} z^{n-1} + \cdots + a_1 z + a_0,\quad \text{com } a_n \neq 0.
 $$
 
-**Fórmulas** (indutivamente):
-
-* $t_1 \in t_2$ e $t_1 = t_2$ são fórmulas atômicas;
-* Se $\varphi,\psi$ são fórmulas, então
-  $\neg\varphi,\;(\varphi\land\psi),\;(\varphi\lor\psi),\;(\varphi\to\psi)$ são fórmulas;
-* Se $\varphi$ é fórmula e $x$ variável, então $\forall x\,\varphi$ e $\exists x\,\varphi$ são fórmulas.
-
-**Axiomas de Zermelo–Fraenkel**
-
-1. **Extensionalidade**
-
-   $$
-     \forall A\;\forall B\;\bigl(\forall x\,(x\in A\leftrightarrow x\in B)\;\to\;A=B\bigr).
-   $$
-2. **Esquema de Compreensão Restrita**
-   Para cada fórmula $\varphi(x)$ sem quantificar sobre o conjunto resultante,
-
-   $$
-     \forall A\;\exists B\;\forall x\;\bigl(x\in B\leftrightarrow x\in A\land\varphi(x)\bigr).
-   $$
-3. **Par Ordenado**
-
-   $$
-     \forall A\,\forall B\;\exists C\;\forall x\;\bigl(x\in C\leftrightarrow x=A\lor x=B\bigr).
-   $$
-4. **União**
-
-   $$
-     \forall A\;\exists B\;\forall x\;\bigl(x\in B\leftrightarrow\exists C\,(x\in C\land C\in A)\bigr).
-   $$
-5. **Conjunto das Partes**
-
-   $$
-     \forall A\;\exists B\;\forall x\;\bigl(x\in B\leftrightarrow x\subseteq A\bigr).
-   $$
-6. **Infinito**
-
-   $$
-     \exists I\;\bigl(\varnothing\in I\;\land\;\forall x\,(x\in I\to x\cup\{x\}\in I)\bigr).
-   $$
-7. **Substituição (Esquema)**
-   Se $\varphi(x,y)$ define função, então
-
-   $$
-     \forall A\;\exists B\;\forall y\;\bigl(y\in B\leftrightarrow\exists x\,(x\in A\land\varphi(x,y))\bigr).
-   $$
-8. **Regularidade (Fundamentação)**
-
-   $$
-     \forall A\bigl(A\neq\varnothing\to\exists x\,(x\in A\land x\cap A=\varnothing)\bigr).
-   $$
-9. **Escolha (AC)** *(opcional)*
-
-   $$
-     \forall A\bigl(\varnothing\notin A\to\exists f:A\to\bigcup A\;\land\;\forall X\in A\,(f(X)\in X)\bigr).
-   $$
-
----
-
-## 2. Lógica de Primeira Ordem
-
-**Linguagem**
+Então, existem números complexos $\lambda_1, \lambda_2, \dots, \lambda_n$ (não necessariamente distintos) tais que:
 
 $$
-  L = \bigl(\mathcal V,\;\mathcal F,\;\mathcal P,\;=\bigr)
+p(z) = a_n (z - \lambda_1)(z - \lambda_2) \cdots (z - \lambda_n).
 $$
 
-* $\mathcal V$: conjunto infinito de variáveis $x,y,z,\dots$.
-* $\mathcal F$: símbolos de função de vários aridades.
-* $\mathcal P$: símbolos de predicado de vários aridades.
-* “$=$” é símbolo de igualdade (predicado binário especial).
+Isso implica que toda equação polinomial de grau $n$ com coeficientes complexos possui exatamente $n$ raízes complexas, contando multiplicidades.([Wikipedia][1])
 
-**Termos**
+### Consequências
 
-$$
-  t ::= x\mid f(t_1,\dots,t_n)\quad(f\in\mathcal F,\;n\ge1).
-$$
+* **Fatoração de Polinômios**: Qualquer polinômio com coeficientes complexos pode ser decomposto em fatores lineares sobre $\mathbb{C}$.
 
-**Fórmulas**
+* **Autovalores de Matrizes**: O teorema garante que o polinômio característico de uma matriz quadrada com entradas complexas pode ser fatorado completamente, assegurando a existência de autovalores complexos, o que é fundamental na análise de operadores lineares.([Wikipedia][3])
 
-* $P(t_1,\dots,t_n)$ e $t_1 = t_2$ são atômicas;
-* Fecham-se sob $\neg,\land,\lor,\to$;
-* Fecham-se sob quantificadores $\forall x,\;\exists x$.
+### Observações
 
-**Estrutura (Interpretação)**
+* Embora existam diversas demonstrações do Teorema Fundamental da Álgebra, muitas delas utilizam conceitos da análise complexa, como o Teorema de Liouville ou o Teorema de Cauchy-Goursat.([UFPel][4])
 
-$$
-  \mathcal M = \bigl(D,\;I\bigr),
-$$
+* O teorema não afirma que todos os polinômios com coeficientes reais possuem raízes reais, mas sim que suas raízes podem ser complexas.([Wikipedia][2])
 
-onde
+Para uma explicação mais detalhada e visual sobre o Teorema Fundamental da Álgebra, você pode assistir ao seguinte vídeo:
 
-* $D$ é o domínio não vazio;
-* $I$ mapeia cada $n$-símbolo de função $f\mapsto f^{\mathcal M}:D^n\to D$ e cada $n$-símbolo de predicado $P\mapsto P^{\mathcal M}\subseteq D^n$.
+[Curiosidades sobre o Teorema Fundamental da Álgebra - Prof. Anna Paula](https://www.youtube.com/watch?v=X0RJP5wPWyU&utm_source=chatgpt.com)
 
-**Satisfação**
-Para atribuição $v:\mathcal V\to D$, define-se recursivamente quando
-$\mathcal M\vDash\varphi[v]$ (“$\varphi$ é verdadeira em $\mathcal M$ sob $v$”), conforme a semântica usual.
-
----
-
-## Exemplos
-
-1. **Conjuntos**
-
-   $$
-     A = \{1,2,3\},\quad B=\{2,3,4\}.
-   $$
-
-   $$
-     A\cap B = \{\,x\mid x\in A\land x\in B\} = \{2,3\},
-     \quad
-     A\cup B = \{1,2,3,4\}.
-   $$
-
-2. **Fórmulas Lógicas**
-
-   * $\forall x\,(P(x)\to Q(x))$: “Para todo $x$, se $P(x)$ então $Q(x)$”.
-   * $\exists y\,P(y)\land\neg Q(y)$: “Existe $y$ tal que $P(y)$ e não $Q(y)$”.
-
-3. **Exemplo em Teoria de Conjuntos**
-   Axioma do Par aplicado a $\{a\}$ e $\{b\}$:
-
-   $$
-     \exists C\;\forall x\;(x\in C\leftrightarrow x=\{a\}\lor x=\{b\}),
-   $$
-
-   ou seja, $C = \bigl\{\{a\},\{b\}\bigr\}$.
+[1]: https://es.wikipedia.org/wiki/Teorema_fundamental_del_%C3%A1lgebra?utm_source=chatgpt.com "Teorema fundamental del álgebra"
+[2]: https://pt.wikipedia.org/wiki/Teorema_fundamental_da_%C3%A1lgebra?utm_source=chatgpt.com "Teorema fundamental da álgebra"
+[3]: https://pt.wikipedia.org/wiki/Autovalores_e_autovetores?utm_source=chatgpt.com "Autovalores e autovetores – Wikipédia, a enciclopédia livre"
+[4]: https://www2.ufpel.edu.br/cic/2009/cd/pdf/CE/CE_02066.pdf?utm_source=chatgpt.com "[PDF] Uma demonstração do Teorema Fundamental da Álgebra ... - UFPel"

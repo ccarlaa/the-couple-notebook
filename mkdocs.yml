@@ -71,12 +71,15 @@ nav:
       - Composição Interna: matematica/conceitos-gerais/composicao-interna.md
       - Grupo: matematica/conceitos-gerais/grupo.md
       - Corpo: matematica/conceitos-gerais/corpo.md
+      - Anel:  matematica/conceitos-gerais/anel.md
+      - Polinômios: matematica/conceitos-gerais/polinomios.md
+      - Função Polinomial: matematica/conceitos-gerais/funcao_polinomial.md
       - Espaços: matematica/conceitos-gerais/espacos.md
       - Produto Cartesiano: matematica/conceitos-gerais/produto-cartesiano.md
       - Produto Interno: matematica/conceitos-gerais/produto-interno.md 
       - Sequência de Cauchy: matematica/conceitos-gerais/cauchy-sequence.md
-      - Polinômios: matematica/conceitos-gerais/polinomios.md
     - Álgebra Linear: 
+      - Teorema Fundamental da Álgebra: matematica/ial/tfa.md
       - Norma: matematica/ial/norma.md
       - Espaço Hilbertiano: matematica/ial/espaco-hilbertiano.md
   - About: about.md
