@@ -75,11 +75,20 @@ nav:
       - Polinômios: matematica/conceitos-gerais/polinomios.md
       - Função Polinomial: matematica/conceitos-gerais/funcao_polinomial.md
       - Espaços: matematica/conceitos-gerais/espacos.md
+      - K-Álgebra: matematica/conceitos-gerais/k-algebra.md
       - Produto Cartesiano: matematica/conceitos-gerais/produto-cartesiano.md
       - Produto Interno: matematica/conceitos-gerais/produto-interno.md 
       - Sequência de Cauchy: matematica/conceitos-gerais/cauchy-sequence.md
+      - Matrizes: matematica/conceitos-gerais/matrizes.md
+      - Transformação Linear: matematica/conceitos-gerais/transformacao-linear.md
+      - Determinante: matematica/conceitos-gerais/determinante.md
+      - Combinação Linear: matematica/conceitos-gerais/combinacao-linear.md
     - Álgebra Linear: 
       - Teorema Fundamental da Álgebra: matematica/ial/tfa.md
       - Norma: matematica/ial/norma.md
+      - Base do Espaço Vetorial: matematica/ial/base.md
       - Espaço Hilbertiano: matematica/ial/espaco-hilbertiano.md
+      - Projeção: matematica/ial/projecao.md
+    - Análise:
+      - Série de Fourier: matematica/analysis/fourier-series.md
   - About: about.md

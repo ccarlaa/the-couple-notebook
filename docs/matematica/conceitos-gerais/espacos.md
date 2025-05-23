@@ -81,11 +81,19 @@ Um **espaço vetorial** (também chamado de **espaço linear**) é uma estrutura
 
 ### **1. Definição Formal**
 
-Um **espaço vetorial** é um par $(V, \mathbb{K})$, onde:
+Um **espaço vetorial** é uma quádrupla
 
-* $V$ é um conjunto cujos elementos são chamados de **vetores**;
-* $\mathbb{K}$ é um **corpo** (por exemplo, $\mathbb{R}$, $\mathbb{C}$, $\mathbb{Q}$);
-* estão definidas duas operações:
+$$
+(V, K, +, \cdot)
+$$
+
+tal que:
+
+1. $(V, +)$ é um **grupo abeliano** com elemento neutro $0_V$;
+2. $(K, +, \cdot)$ é um **corpo**;
+3. $\cdot: K \times V \to V$, chamada **multiplicação escalar**.
+
+Onde estão definidas duas operações:
 
   1. **Adição de vetores**:
      $+\colon V \times V \to V, \quad (u,v) \mapsto u + v$
