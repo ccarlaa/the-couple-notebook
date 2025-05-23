@@ -13,24 +13,26 @@
       
       
       
+        <link rel="prev" href="../matrizes/">
       
-        <link rel="next" href="matematica/conceitos-gerais/conjuntos/">
+      
+        <link rel="next" href="../determinante/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
-        <title>The Couple Notebook</title>
+        <title>Transformação Linear - The Couple Notebook</title>
       
     
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35e1ed30.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -53,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -81,6 +83,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#definicao-formal" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +100,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="The Couple Notebook" class="md-header__button md-logo" aria-label="The Couple Notebook" data-md-component="logo">
+    <a href="../../.." title="The Couple Notebook" class="md-header__button md-logo" aria-label="The Couple Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -113,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Transformação Linear
             
           </span>
         </div>
@@ -209,11 +216,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -228,17 +233,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="matematica/conceitos-gerais/conjuntos/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../conjuntos/" class="md-tabs__link">
           
   
   Matemática
@@ -257,7 +266,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="about/" class="md-tabs__link">
+      <a href="../../../about/" class="md-tabs__link">
         
   
     
@@ -299,7 +308,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="The Couple Notebook" class="md-nav__button md-logo" aria-label="The Couple Notebook" data-md-component="logo">
+    <a href="../../.." title="The Couple Notebook" class="md-nav__button md-logo" aria-label="The Couple Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -326,16 +335,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -344,7 +346,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -353,6 +354,8 @@
       
   
   
+    
+  
   
     
     
@@ -362,12 +365,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -381,7 +384,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Matemática
@@ -392,18 +395,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -417,7 +422,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Conceitos Gerais
@@ -430,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/conjuntos/" class="md-nav__link">
+      <a href="../conjuntos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -450,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/composicao-interna/" class="md-nav__link">
+      <a href="../composicao-interna/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -470,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/grupo/" class="md-nav__link">
+      <a href="../grupo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -490,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/corpo/" class="md-nav__link">
+      <a href="../corpo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -510,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/anel/" class="md-nav__link">
+      <a href="../anel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/polinomios/" class="md-nav__link">
+      <a href="../polinomios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/funcao_polinomial/" class="md-nav__link">
+      <a href="../funcao_polinomial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -570,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/espacos/" class="md-nav__link">
+      <a href="../espacos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/k-algebra/" class="md-nav__link">
+      <a href="../k-algebra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -610,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/produto-cartesiano/" class="md-nav__link">
+      <a href="../produto-cartesiano/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/produto-interno/" class="md-nav__link">
+      <a href="../produto-interno/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/cauchy-sequence/" class="md-nav__link">
+      <a href="../cauchy-sequence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -670,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/matrizes/" class="md-nav__link">
+      <a href="../matrizes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,9 +693,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/transformacao-linear/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Transformação Linear
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -699,6 +722,45 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-formal" class="md-nav__link">
+    Definição Formal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicoes-associadas" class="md-nav__link">
+    Definições Associadas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplos" class="md-nav__link">
+    Exemplos
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -710,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/determinante/" class="md-nav__link">
+      <a href="../determinante/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -730,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/conceitos-gerais/combinacao-linear/" class="md-nav__link">
+      <a href="../combinacao-linear/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -794,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/ial/tfa/" class="md-nav__link">
+      <a href="../../ial/tfa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -814,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/ial/norma/" class="md-nav__link">
+      <a href="../../ial/norma/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -834,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/ial/base/" class="md-nav__link">
+      <a href="../../ial/base/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -854,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/ial/espaco-hilbertiano/" class="md-nav__link">
+      <a href="../../ial/espaco-hilbertiano/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -874,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/ial/projecao/" class="md-nav__link">
+      <a href="../../ial/projecao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -938,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="matematica/analysis/fourier-series/" class="md-nav__link">
+      <a href="../../analysis/fourier-series/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,7 +1066,101 @@
   
 
 
-<h1>Oe mozin ♡</h1>
+  <h1>Transformação Linear</h1>
+
+<p><strong>Resumo (explicação simples)</strong>
+Uma <strong>transformação linear</strong> (ou <strong>aplicação linear</strong>, ou <strong>morfismo de espaços vetoriais</strong>) é uma função entre dois espaços vetoriais que preserva soma de vetores e multiplicação por escalares. Em termos geométricos, ela “respeita” a estrutura de combinações lineares.</p>
+<hr />
+<h2 id="definicao-formal">Definição Formal</h2>
+<p>Sejam</p>
+<div class="arithmatex">\[
+(V, K, +_V, \bullet_V)
+\quad\text{e}\quad
+(W, K, +_W, \bullet_W)
+\]</div>
+<p>espaços vetoriais sobre o mesmo corpo <span class="arithmatex">\(K\)</span>. Uma aplicação</p>
+<div class="arithmatex">\[
+T\colon V \;\longrightarrow\; W
+\]</div>
+<p>é chamada <strong>transformação linear</strong> se, e somente se, para todos <span class="arithmatex">\(u,v\in V\)</span> e todo <span class="arithmatex">\(\lambda\in K\)</span> valem os dois axiomas:</p>
+<ol>
+<li><strong>Aditividade</strong></li>
+</ol>
+<p>
+<script type="math/tex; mode=display">
+   T(u +_V v) \;=\; T(u) +_W T(v).
+   </script>
+</p>
+<ol>
+<li><strong>Homogeneidade (ou compatibilidade escalar)</strong></li>
+</ol>
+<p>
+<script type="math/tex; mode=display">
+   T(\lambda \bullet_V v) \;=\; \lambda \bullet_W T(v).
+   </script>
+</p>
+<p>Em notação compacta, pode-se escrever:</p>
+<div class="arithmatex">\[
+\forall\,u,v\in V,\;\forall\,\lambda\in K,\quad
+T(u + v) = T(u) + T(v),
+\quad
+T(\lambda v) = \lambda\,T(v).
+\]</div>
+<hr />
+<h2 id="definicoes-associadas">Definições Associadas</h2>
+<ul>
+<li><strong>Núcleo</strong> (<span class="arithmatex">\(\ker T\)</span>)</li>
+</ul>
+<p>
+<script type="math/tex; mode=display">
+    \ker T 
+    := \{\,v\in V \mid T(v) = 0_W\}.
+  </script>
+* <strong>Imagem</strong> (<span class="arithmatex">\(\operatorname{Im} T\)</span>)</p>
+<p>
+<script type="math/tex; mode=display">
+    \operatorname{Im} T
+    := \{\,T(v)\in W \mid v\in V\}.
+  </script>
+* <strong>Propriedades</strong></p>
+<ul>
+<li><span class="arithmatex">\(T\)</span> é <strong>injetora</strong> ⟺ <span class="arithmatex">\(\ker T = \{0_V\}\)</span>.</li>
+<li><span class="arithmatex">\(T\)</span> é <strong>sobrejetora</strong> ⟺ <span class="arithmatex">\(\operatorname{Im}T = W\)</span>.</li>
+<li><strong>Teorema da dimensão</strong> (caso <span class="arithmatex">\(\dim V &lt; \infty\)</span>):
+    <span class="arithmatex">\(\displaystyle \dim V = \dim(\ker T) + \dim(\operatorname{Im}T).\)</span></li>
+</ul>
+<hr />
+<h2 id="exemplos">Exemplos</h2>
+<ol>
+<li>
+<p><strong>Mapa identidade</strong>
+   <span class="arithmatex">\(\displaystyle \mathrm{id}_V\colon V\to V,\;\mathrm{id}_V(v)=v\)</span>.</p>
+</li>
+<li>
+<p><strong>Mapa nulo</strong>
+   <span class="arithmatex">\(\displaystyle T\colon V\to W,\;T(v)=0_W\)</span> para todo <span class="arithmatex">\(v\in V\)</span>.</p>
+</li>
+<li>
+<p><strong>Multiplicação por matriz</strong>
+   Se <span class="arithmatex">\(A\in M_{m\times n}(K)\)</span>, então
+   <script type="math/tex; mode=display">
+     T_A\colon K^n \to K^m,\quad T_A(x)=A\,x
+   </script>
+   é transformação linear.</p>
+</li>
+<li>
+<p><strong>Derivação em polinômios</strong>
+   <script type="math/tex; mode=display">
+     D\colon K[x]\to K[x],\quad D\Bigl(\sum_i a_i x^i\Bigr)
+     = \sum_i i\,a_i x^{i-1}.
+   </script>
+   Verifica <span class="arithmatex">\(D(f+g)=D(f)+D(g)\)</span> e <span class="arithmatex">\(D(\lambda f)=\lambda D(f)\)</span>.</p>
+</li>
+<li>
+<p><strong>Projeção ortogonal</strong>
+   Em um espaço euclidiano <span class="arithmatex">\(V\)</span>, a aplicação que leva cada vetor ao seu componente sobre um subespaço <span class="arithmatex">\(U\subset V\)</span> é linear.</p>
+</li>
+</ol>
 
 
 
@@ -1031,15 +1187,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../matrizes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Matrizes">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Matrizes
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="matematica/conceitos-gerais/conjuntos/" class="md-footer__link md-footer__link--next" aria-label="Next: Conjuntos">
+          <a href="../determinante/" class="md-footer__link md-footer__link--next" aria-label="Next: Determinante">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Conjuntos
+                Determinante
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1090,10 +1262,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["toc.integrate", "toc.follow", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "navigation.instant", "navigation.top", "content.code.annotate"], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["toc.integrate", "toc.follow", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "navigation.instant", "navigation.top", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
