@@ -5,6 +5,7 @@ site_author: Carla
 repo_name: ccarlaa/the-couple-notebook
 repo_url: https://github.com/ccarlaa/the-couple-notebook
 edit_uri: edit/main/docs/
+site_url: https://ccarlaa.github.io/the-couple-notebook/
 
 theme:
   name: material
@@ -42,8 +43,9 @@ extra:
       link: https://fosstodon.org/@squidfunk
   
 plugins: 
-  - search:
+  - search: 
       lang: pt-BR
+  - autolinks
 
 markdown_extensions:
   - attr_list
@@ -70,8 +72,8 @@ nav:
       - Conjuntos: matematica/conceitos-gerais/conjuntos.md
       - Composição Interna: matematica/conceitos-gerais/composicao-interna.md
       - Grupo: matematica/conceitos-gerais/grupo.md
-      - Corpo: matematica/conceitos-gerais/corpo.md
       - Anel:  matematica/conceitos-gerais/anel.md
+      - Corpo: matematica/conceitos-gerais/corpo.md
       - Polinômios: matematica/conceitos-gerais/polinomios.md
       - Função Polinomial: matematica/conceitos-gerais/funcao_polinomial.md
       - Espaços: matematica/conceitos-gerais/espacos.md

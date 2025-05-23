@@ -67,7 +67,7 @@ Um subconjunto $\mathcal{B} = \{v_1, v_2, \dots, v_n\} \subseteq V$ é uma **bas
    \forall i \ne j,\quad \langle v_i, v_j \rangle = 0.
    $$
 
-Se, além disso,
+E também, se, além disso,
 
 $$
 \forall i,\quad \|v_i\| = \sqrt{\langle v_i, v_i \rangle} = 1,
