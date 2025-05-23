@@ -12,6 +12,8 @@
         <meta name="author" content="Carla">
       
       
+        <link rel="canonical" href="https://ccarlaa.github.io/the-couple-notebook/matematica/analysis/fourier-series/">
+      
       
         <link rel="prev" href="../../ial/projecao/">
       
@@ -493,11 +495,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../conceitos-gerais/corpo/" class="md-nav__link">
+      <a href="../../conceitos-gerais/anel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Corpo
+    Anel
   </span>
   
 
@@ -513,11 +515,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../conceitos-gerais/anel/" class="md-nav__link">
+      <a href="../../conceitos-gerais/corpo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Anel
+    Corpo
   </span>
   
 
@@ -1003,36 +1005,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-contexto-e-espaco-funcional" class="md-nav__link">
-    1. Contexto e Espaço Funcional
+  <a href="#2-contexto-e-espaco-funcional" class="md-nav__link">
+    2. Contexto e Espaço Funcional
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-forma-trigonometrica-da-serie-de-fourier" class="md-nav__link">
-    2. Forma Trigonométrica da Série de Fourier
+  <a href="#3-forma-trigonometrica-da-serie-de-fourier" class="md-nav__link">
+    3. Forma Trigonométrica da Série de Fourier
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-forma-exponencial-complexa" class="md-nav__link">
-    3. Forma Exponencial (Complexa)
+  <a href="#4-forma-exponencial-complexa" class="md-nav__link">
+    4. Forma Exponencial (Complexa)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-teoremas-de-convergencia" class="md-nav__link">
-    4. Teoremas de Convergência
+  <a href="#5-teoremas-de-convergencia" class="md-nav__link">
+    5. Teoremas de Convergência
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-exemplos" class="md-nav__link">
-    5. Exemplos
+  <a href="#6-desenvolvimento" class="md-nav__link">
+    6. Desenvolvimento
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Desenvolvimento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintese" class="md-nav__link">
+    Síntese:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-exemplos" class="md-nav__link">
+    7. Exemplos
   </a>
   
 </li>
@@ -1101,82 +1123,81 @@
 <h1 id="serie-de-fourier">Série de Fourier</h1>
 <h2 id="um-pouco-de-historia">Um pouco de história</h2>
 <p>A série de Fourier surgiu no início do século XIX, quando o matemático francês Joseph Fourier buscava compreender a propagação do calor em corpos sólidos. Em 1807, ele apresentou à Academia Francesa seu trabalho "Mémoire sur la propagation de la chaleur dans les corps solides", no qual propôs que qualquer função periódica poderia ser expressa como uma soma infinita de senos e cossenos — o que hoje conhecemos como série de Fourier. </p>
+<hr />
 <h2 id="1-resumo">1. Resumo</h2>
 <p>Uma <strong>série de Fourier</strong> expressa uma função periódica <span class="arithmatex">\(f\)</span> como uma soma de funções trigonométricas ou fasores. Assim, qualquer forma de onda ou função periódica — desde sinais elétricos até vibrações mecânicas — pode ser “decomposta” em <strong>harmônicos puros</strong>, o que é fundamental em Análise de Sinais, Física e Engenharia.</p>
-<hr />
-<h2 id="1-contexto-e-espaco-funcional">1. Contexto e Espaço Funcional</h2>
-<p>Seja <span class="arithmatex">\(f\colon \mathbb{R}\to\mathbb{R}\)</span> (ou <span class="arithmatex">\(\mathbb{C}\)</span>) <strong>periódica</strong> de período <span class="arithmatex">\(2\pi\)</span>, isto é,</p>
+<h2 id="2-contexto-e-espaco-funcional">2. Contexto e Espaço Funcional</h2>
+<p>Seja <span class="arithmatex">\(f\colon \mathbb{R}\to\mathbb{R}\)</span> (ou <span class="arithmatex">\(\mathbb{C}\)</span>) <strong>periódica</strong> de período <span class="arithmatex">\(P=2T\)</span>, isto é,</p>
 <div class="arithmatex">\[
-f(x + 2\pi) = f(x)\quad\forall x\in\mathbb{R}.
+f(t + 2T) = f(t)\quad\forall t\in\mathbb{R}.
 \]</div>
-<p>Suponha que <span class="arithmatex">\(f\)</span> satisfaça as <strong>condições de Dirichlet</strong> em um período (por exemplo, seja de classe <span class="arithmatex">\(C^1\)</span> por partes). Então <span class="arithmatex">\(f\)</span> pertence ao espaço <span class="arithmatex">\(L^2([-\pi,\pi])\)</span> ou ao espaço das funções de quadrado-integrável em <span class="arithmatex">\([-\pi,\pi]\)</span>.</p>
-<p>No espaço de Hilbert <span class="arithmatex">\(\bigl(L^2([-\pi,\pi]),\langle\cdot,\cdot\rangle\bigr)\)</span>, tomamos o <strong>produto interno</strong></p>
+<p>Suponha que <span class="arithmatex">\(f\)</span> satisfaça as <strong>condições de Dirichlet</strong> em um período (por exemplo, seja de classe <span class="arithmatex">\(C^1\)</span> por partes). Então <span class="arithmatex">\(f\)</span> pertence ao espaço <span class="arithmatex">\(L^2([-T,T])\)</span> ou ao espaço das funções de quadrado-integrável em <span class="arithmatex">\([-T,T]\)</span>.</p>
+<p>No espaço de Hilbert <span class="arithmatex">\(\bigl(L^2([-T,T]),\langle\cdot,\cdot\rangle\bigr)\)</span>, tomamos o <strong>produto interno</strong></p>
 <div class="arithmatex">\[
-\langle g, h\rangle \;=\;\int_{-\pi}^{\pi} g(x)\,\overline{h(x)}\,dx
+\langle g, h\rangle \;=\;\int_{-T}^{T} g(x)\,\overline{h(x)}\,dt
 \]</div>
 <p>e a norma associada <span class="arithmatex">\(\|g\|^2=\langle g,g\rangle\)</span>.</p>
 <p>As funções</p>
 <div class="arithmatex">\[
-1,\quad \cos(nx),\quad \sin(nx)\quad(n=1,2,3,\dots)
+1,\quad \cos(n \omega t),\quad \sin(n\omega t)\quad \text{com}\;\; (n=1,2,3,\dots)
 \]</div>
-<p>formam um <strong>sistema ortogonal</strong> em <span class="arithmatex">\(L^2([-\pi,\pi])\)</span>.</p>
+<p>formam um <strong>sistema ortogonal</strong> em <span class="arithmatex">\(L^2([-T,T])\)</span>.</p>
 <hr />
-<h2 id="2-forma-trigonometrica-da-serie-de-fourier">2. Forma Trigonométrica da Série de Fourier</h2>
-<p>Para <span class="arithmatex">\(f\)</span> periódico de período <span class="arithmatex">\(2\pi\)</span>, definimos os <strong>coeficientes</strong>:</p>
+<h2 id="3-forma-trigonometrica-da-serie-de-fourier">3. Forma Trigonométrica da Série de Fourier</h2>
+<p>Para <span class="arithmatex">\(f\)</span> periódico de período <span class="arithmatex">\(P=2T\)</span>, definimos os <strong>coeficientes</strong>:</p>
 <div class="arithmatex">\[
 \begin{aligned}
-a_0 &amp;= \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\,dx,\\
-a_n &amp;= \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\,\cos(nx)\,dx,\quad n\ge1,\\
-b_n &amp;= \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\,\sin(nx)\,dx,\quad n\ge1.
+a_0 &amp;= \frac{1}{T}\int_{-T}^{T} f(t)\,dt,\\
+a_n &amp;= \frac{1}{T}\int_{-T}^{T} f(t)\,\cos(n\omega t)\,dt,\quad n\ge1,\\
+b_n &amp;= \frac{1}{T}\int_{-T}^{T} f(t)\,\sin(n\omega t)\,dt,\quad n\ge1.
 \end{aligned}
 \]</div>
 <p>A <strong>série de Fourier</strong> de <span class="arithmatex">\(f\)</span> é então:</p>
 <div class="arithmatex">\[
 \boxed{
-f(x)\sim \frac{a_0}{2}
-\;+\;\sum_{n=1}^{\infty}\bigl[a_n\cos(nx)+b_n\sin(nx)\bigr].
+f(t)\sim \frac{a_0}{2}
+\;+\;\sum_{n=1}^{\infty}\bigl[a_n\cos(n\omega t)+b_n\sin(n\omega t)\bigr].
 }
 \]</div>
 <p>— Aqui “<span class="arithmatex">\(\sim\)</span>” indica que a série converge (em norma <span class="arithmatex">\(L^2\)</span>, ponto a ponto ou uniformemente, conforme hipóteses adicionais) para <span class="arithmatex">\(f\)</span> ou para <span class="arithmatex">\(\bigl(f(x^+)+f(x^-)\bigr)/2\)</span> se houver descontinuidades.</p>
-<hr />
-<h2 id="3-forma-exponencial-complexa">3. Forma Exponencial (Complexa)</h2>
+<h2 id="4-forma-exponencial-complexa">4. Forma Exponencial (Complexa)</h2>
 <p>Em vez de seno e cosseno, usa-se a base completa de exponenciais:</p>
 <div class="arithmatex">\[
-e^{inx},\quad n\in\mathbb{Z},
+e^{jn\omega t},\quad n\in\mathbb{Z},
 \]</div>
-<p>ortogonais em <span class="arithmatex">\(L^2([-\pi,\pi])\)</span>. Definem‑se</p>
+<p>ortogonais em <span class="arithmatex">\(L^2([-T,T])\)</span>. Definem‑se</p>
 <div class="arithmatex">\[
-c_n = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(x)\,e^{-inx}\,dx,
+c_n = \frac{1}{2T}\int_{-T}^{T} f(t)\,e^{-jn\omega t}\,dt,
 \qquad n\in\mathbb{Z}.
 \]</div>
 <p>A <strong>série de Fourier complexa</strong> é:</p>
 <div class="arithmatex">\[
 \boxed{
-f(x)\sim \sum_{n=-\infty}^{\infty} c_n\,e^{inx}.
+f(t)\sim \sum_{n=-\infty}^{\infty} c_n\,e^{jn\omega t}.
 }
 \]</div>
 <p>Relação com a forma trigonométrica:</p>
 <div class="arithmatex">\[
 c_0 = \frac{a_0}{2},\quad
-c_n = \frac{a_n - i\,b_n}{2},\quad
-c_{-n} = \frac{a_n + i\,b_n}{2}.
+c_n = \frac{a_n - j\,b_n}{2},\quad
+c_{-n} = \frac{a_n + j\,b_n}{2}.
 \]</div>
 <hr />
-<h2 id="4-teoremas-de-convergencia">4. Teoremas de Convergência</h2>
+<h2 id="5-teoremas-de-convergencia">5. Teoremas de Convergência</h2>
 <ul>
 <li>
-<p><strong>Convergência em <span class="arithmatex">\(L^2\)</span></strong>: Se <span class="arithmatex">\(f\in L^2([-\pi,\pi])\)</span>, então sua série de Fourier converge para <span class="arithmatex">\(f\)</span> em norma <span class="arithmatex">\(L^2\)</span>.</p>
+<p><strong>Convergência em <span class="arithmatex">\(L^2\)</span></strong>: Se <span class="arithmatex">\(f\in L^2([-T,T])\)</span>, então sua série de Fourier converge para <span class="arithmatex">\(f\)</span> em norma <span class="arithmatex">\(L^2\)</span>.</p>
 </li>
 <li>
-<p><strong>Convergência pontual</strong> (Dirichlet): Se <span class="arithmatex">\(f\)</span> é periódica e com número finito de descontinuidades e de máximos/minimos por período, então para todo <span class="arithmatex">\(x\)</span>,</p>
+<p><strong>Convergência pontual</strong> (Dirichlet): Se <span class="arithmatex">\(f\)</span> é periódica e com número finito de descontinuidades e de máximos/minimos por período, então para todo <span class="arithmatex">\(t\)</span>,</p>
 </li>
 </ul>
 <p>
 <script type="math/tex; mode=display">
-  S_N(x)
-  := \frac{a_0}{2} + \sum_{n=1}^N [a_n\cos(nx)+b_n\sin(nx)]
+  S_N(t)
+  := \frac{a_0}{2} + \sum_{n=1}^N [a_n\cos(n\omega t)+b_n\sin(n\omega t)]
   \;\longrightarrow\;
-  \frac{f(x^+)+f(x^-)}{2}
+  \frac{f(t^+)+f(t^-)}{2}
   \quad(N\to\infty).
   </script>
 </p>
@@ -1184,39 +1205,112 @@ c_{-n} = \frac{a_n + i\,b_n}{2}.
 <li><strong>Convergência uniforme</strong>: Se <span class="arithmatex">\(f\)</span> é contínua e de classe Lipschitz ou com derivada contínua, a convergência é uniforme.</li>
 </ul>
 <hr />
-<h2 id="5-exemplos">5. Exemplos</h2>
+<h2 id="6-desenvolvimento">6. Desenvolvimento</h2>
+<p>Seja <span class="arithmatex">\(f(t)\)</span> uma função periódica de período <span class="arithmatex">\(P=2T\)</span>, assumamos que ela pode ser representada por um soma de funções periódicas ortogonais entre si. Em outras palavras, <span class="arithmatex">\(f(t)\)</span> pode ser projetada em bases periódicas ortogonais. Para este caso, utilizemos as seguintes bases:</p>
+<div class="arithmatex">\[
+\boxed{\;\cos(n \omega t),\quad \sin(n\omega t), \quad 1\;}\quad \text{com}\;\; (n=1,2,3,\dots)
+\]</div>
+<p>Portanto:</p>
+<div class="arithmatex">\[
+f(t) \sim \sum_{n=0}^\infty \bigl[a_n\cos(n\omega t)+b_n\sin(n\omega t)\bigr]
+\]</div>
+<p>Agora precisamos descobrir quais os valores de <span class="arithmatex">\(a_n\)</span> e <span class="arithmatex">\(b_n\)</span>, portanto, vamos projetar a função em cada uma das bases</p>
 <ol>
-<li><strong>Onda quadrada</strong> de período <span class="arithmatex">\(2\pi\)</span>:</li>
+<li>
+<p>Base <span class="arithmatex">\(1\)</span>:
+<script type="math/tex; mode=display">
+\langle f, 1\rangle \;=\;\int_{-T}^{T} f(t)\,\overline{1}\,dt
+</script>
+<script type="math/tex; mode=display">
+\therefore \int_{-T}^{T} f(t)\,dt = \int_{-T}^{T} \sum_{n=0}^\infty \bigl[a_n\cos(n\omega t)+b_n\sin(n\omega t)\bigr]\,dt = \int_{-T}^{T} a_0\,dt 
+</script>
+<script type="math/tex; mode=display">
+\text{Tendo em vista que:} \quad \forall n>0,\;\int_{-T}^{T} \cos(n\omega t)\,dt = \int_{-T}^{T} \sin(n\omega t)\,dt = 0
+</script>
+<script type="math/tex; mode=display">
+\therefore \int_{-T}^{T} f(t)\,dt = a_0 \cdot 2T \Rightarrow \boxed{2\cdot a_0 = \frac{1}{T}\int_{-T}^{T} f(t)\,dt}
+</script>
+</p>
+</li>
+<li>
+<p>Base <span class="arithmatex">\(\cos(n\omega t)\)</span>:</p>
+</li>
+</ol>
+<p>Assumamos uma base <span class="arithmatex">\(\cos(m\omega t)\)</span>:
+<script type="math/tex; mode=display">
+\langle f, \cos(m\omega t)\rangle \;=\;\int_{-T}^{T} f(t)\,\overline{\cos(m\omega t)}\,dt
+</script>
+<script type="math/tex; mode=display">
+\therefore \int_{-T}^{T} f(t)\,\cos(m\omega t)\,dt = \frac{a_0}{2}\; +\; \sum_{n=1}^{\infty}\; \bigl[ a_n \int_{-T}^{T} \cos(n\omega t)\cos(m\omega t)\, dt\; +\; b_n \int_{-T}^{T} \sin(n\omega t)\cos(m\omega t)\, dt \bigr]
+</script>
+<script type="math/tex; mode=display">
+\text{Como }\cos(n\omega t)\, \text{é uma base ortogonal: }\; \int_{-T}^{T} \cos(n\omega t)\cos(m\omega t)\, dt = T\cdot\delta_{nm}, \quad\delta_{ij} = 
+\begin{cases}
+1 & \text{if } i = j, \\
+0 & \text{if } i \ne j.
+\end{cases}
+</script>
+<script type="math/tex; mode=display">
+\therefore \int_{-T}^{T} f(t)\,\cos(m\omega t)\,dt\; = \; a_n \cdot 1 \Rightarrow \boxed{a_n\, =\, \frac{1}{T}\int_{-T}^{T} f(t)\,\cos(n\omega t)\,dt}
+</script>
+3. Por fim, para base <span class="arithmatex">\(\sin(n\omega t)\)</span> usamos a mesma lógica anterior:
+<script type="math/tex; mode=display">
+\langle f, \sin(m\omega t)\rangle \;=\;\int_{-T}^{T} f(t)\,\overline{\sin(m\omega t)}\,dt
+</script>
+<script type="math/tex; mode=display">
+\Rightarrow \boxed{b_n\, =\, \frac{1}{T}\int_{-T}^{T} f(t)\,\sin(n\omega t)\,dt}
+</script>
+</p>
+<h3 id="sintese">Síntese:</h3>
+<p>E assim chegamos ao valor de cada um dos valores dos coeficientes da fórmula da série de Fourier descrita no ponto 3:</p>
+<div class="arithmatex">\[
+f(t) = \frac{a_0}{2}
+\;+\;\sum_{n=1}^{\infty}\bigl[a_n\cos(n\omega t)+b_n\sin(n\omega t)\bigr].
+\]</div>
+<p>E para chegarmos na sua forma <strong>Exponencial</strong> precisamos apenas substituir os senos e cossenos por suas fórmulas exponenciais e atribuir <span class="arithmatex">\(n\)</span> a todos os Inteiros:</p>
+<div class="arithmatex">\[
+n \in \mathbb{Z}
+\]</div>
+<div class="arithmatex">\[
+\cos(n\omega t)\, =\, \frac{e^{jn\omega t} + e^{-jn\omega t}}{2} 
+\]</div>
+<div class="arithmatex">\[
+\sin(n\omega t)\, =\, \frac{e^{jn\omega t} - e^{-jn\omega t}}{2j}
+\]</div>
+<hr />
+<h2 id="7-exemplos">7. Exemplos</h2>
+<ol>
+<li><strong>Onda quadrada</strong> de período <span class="arithmatex">\(2T\)</span>:</li>
 </ol>
 <p>
 <script type="math/tex; mode=display">
-   f(x) =
+   f(t) =
    \begin{cases}
-   1, & 0<x<\pi,\\
-   -1,& -\pi<x<0,
+   1, & 0<t<T,\\
+   -1,& -T<t<0,
    \end{cases}
    </script>
 </p>
 <p>tem expansão</p>
 <p>
 <script type="math/tex; mode=display">
-   f(x)=\frac{4}{\pi}\sum_{k=0}^\infty \frac{\sin\bigl((2k+1)x\bigr)}{2k+1}.
+   f(t)=\frac{4}{T}\sum_{k=0}^\infty \frac{\sin\bigl((2k+1)t\bigr)}{2k+1}.
    </script>
 </p>
 <ol>
-<li><strong>Sinal dente de serra</strong> <span class="arithmatex">\(f(x)=x\)</span> em <span class="arithmatex">\((-\pi,\pi]\)</span>:</li>
+<li><strong>Sinal dente de serra</strong> <span class="arithmatex">\(f(t)=t\)</span> em <span class="arithmatex">\((-T,T]\)</span>:</li>
 </ol>
 <p>
 <script type="math/tex; mode=display">
-   x = 2\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}\,\sin(nx).
+   t = 2\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}\,\sin(nt).
    </script>
 </p>
 <ol>
-<li><strong>Função módulo</strong> <span class="arithmatex">\(f(x)=|x|\)</span> em <span class="arithmatex">\([-\pi,\pi]\)</span>:</li>
+<li><strong>Função módulo</strong> <span class="arithmatex">\(f(t)=|t|\)</span> em <span class="arithmatex">\([-T,T]\)</span>:</li>
 </ol>
 <p>
 <script type="math/tex; mode=display">
-   |x| = \frac{\pi}{2} - \frac{4}{\pi}\sum_{n=1}^\infty \frac{\cos\bigl((2n-1)x\bigr)}{(2n-1)^2}.
+   |t| = \frac{T}{2} - \frac{4}{T}\sum_{n=1}^\infty \frac{\cos\bigl((2n-1)t\bigr)}{(2n-1)^2}.
    </script>
 </p>
 <hr />

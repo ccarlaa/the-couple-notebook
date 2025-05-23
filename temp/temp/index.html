@@ -12,6 +12,8 @@
         <meta name="author" content="Carla">
       
       
+        <link rel="canonical" href="https://ccarlaa.github.io/the-couple-notebook/temp/temp/">
+      
       
       
       
@@ -78,6 +80,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#properties" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -478,11 +485,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../matematica/conceitos-gerais/corpo/" class="md-nav__link">
+      <a href="../../matematica/conceitos-gerais/anel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Corpo
+    Anel
   </span>
   
 
@@ -498,11 +505,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../matematica/conceitos-gerais/anel/" class="md-nav__link">
+      <a href="../../matematica/conceitos-gerais/corpo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Anel
+    Corpo
   </span>
   
 
@@ -1009,6 +1016,54 @@
 <li><span class="arithmatex">\(v_1, \dots, v_n \in V\)</span> are given vectors.</li>
 </ul>
 <p>Let me know if you also want the negation or the equivalent condition for linear <strong>independence</strong>.</p>
+<p>The <strong>Kronecker delta</strong>, denoted <span class="arithmatex">\(\delta_{ij}\)</span>, is a function of two variables (typically integers <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>) that equals 1 when the indices are equal and 0 otherwise. Formally:</p>
+<div class="arithmatex">\[
+\delta_{ij} =
+\begin{cases}
+1 &amp; \text{if } i = j, \\
+0 &amp; \text{if } i \ne j.
+\end{cases}
+\]</div>
+<hr />
+<h3 id="properties">Properties</h3>
+<ol>
+<li><strong>Identity in summations</strong>:</li>
+</ol>
+<p>
+<script type="math/tex; mode=display">
+   \sum_j \delta_{ij} a_j = a_i
+   </script>
+</p>
+<p>It acts like a filter that "selects" the term where <span class="arithmatex">\(j = i\)</span>.</p>
+<ol>
+<li><strong>Matrix interpretation</strong>:
+   In linear algebra, <span class="arithmatex">\(\delta_{ij}\)</span> is the element of the <strong>identity matrix</strong> <span class="arithmatex">\(I\)</span>, where:</li>
+</ol>
+<p>
+<script type="math/tex; mode=display">
+   I_{ij} = \delta_{ij}
+   </script>
+</p>
+<ol>
+<li><strong>Orthogonality indicator</strong>:
+   In inner product spaces, if <span class="arithmatex">\(\langle \phi_i, \phi_j \rangle = \delta_{ij}\)</span>, then the set <span class="arithmatex">\(\{\phi_k\}\)</span> is an <strong>orthonormal set</strong>.</li>
+</ol>
+<hr />
+<h3 id="example">Example</h3>
+<p>If you have a basis <span class="arithmatex">\(\{e_1, e_2, e_3\}\)</span> with inner product <span class="arithmatex">\(\langle e_i, e_j \rangle = \delta_{ij}\)</span>, then:</p>
+<ul>
+<li><span class="arithmatex">\(\langle e_1, e_1 \rangle = 1\)</span>,</li>
+<li><span class="arithmatex">\(\langle e_1, e_2 \rangle = 0\)</span>,</li>
+<li><span class="arithmatex">\(\langle e_2, e_3 \rangle = 0\)</span>,
+  and so on.</li>
+</ul>
+<hr />
+<h3 id="not-to-confuse-with">Not to confuse with:</h3>
+<ul>
+<li><strong>Dirac delta</strong> <span class="arithmatex">\(\delta(x)\)</span>: a generalized function or distribution used in continuous settings.</li>
+<li><strong>Heaviside function</strong>: a step function, not related to the Kronecker delta.</li>
+</ul>
+<p>Let me know if you want its generalization to tensors or its use in proofs.</p>
 
 
 
