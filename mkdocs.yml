@@ -93,4 +93,4 @@ nav:
       - Projeção: matematica/ial/projecao.md
     - Análise:
       - Série de Fourier: matematica/analysis/fourier-series.md
-  - About: about.md
+      - Transformada de Fourier: matematica/analysis/fourier-transform.md

@@ -7,7 +7,7 @@ A série de Fourier surgiu no início do século XIX, quando o matemático franc
 ---
 
 ## 1. Resumo
-Uma **série de Fourier** expressa uma função periódica $f$ como uma soma de funções trigonométricas ou fasores. Assim, qualquer forma de onda ou função periódica — desde sinais elétricos até vibrações mecânicas — pode ser “decomposta” em **harmônicos puros**, o que é fundamental em Análise de Sinais, Física e Engenharia.
+Uma **série de Fourier** expressa uma função periódica $f$ como uma soma de funções trigonométricas ou fasores. Assim, qualquer forma de onda ou função periódica — desde sinais elétricos até vibrações mecânicas — pode ser “decomposta” em **harmônicos puros** ($nw_0$), o que é fundamental em Análise de Sinais, Física e Engenharia.
 
 ## 2. Contexto e Espaço Funcional
 
@@ -17,7 +17,7 @@ $$
 f(t + 2T) = f(t)\quad\forall t\in\mathbb{R}.
 $$
 
-Suponha que $f$ satisfaça as **condições de Dirichlet** em um período (por exemplo, seja de classe $C^1$ por partes). Então $f$ pertence ao espaço $L^2([-T,T])$ ou ao espaço das funções de quadrado-integrável em $[-T,T]$.
+Suponha que $f$ satisfaça as **condições de Dirichlet** em um período (por exemplo, seja de classe $C^1$ por partes) e sua frequência angular fundamental é $w_0 = \frac{2\pi}{P}$. Então $f$ pertence ao espaço $L^2([-T,T])$ ou ao espaço das funções de quadrado-integrável em $[-T,T]$.
 
 No espaço de Hilbert $\bigl(L^2([-T,T]),\langle\cdot,\cdot\rangle\bigr)$, tomamos o **produto interno**
 
@@ -30,7 +30,7 @@ e a norma associada $\|g\|^2=\langle g,g\rangle$.
 As funções
 
 $$
-1,\quad \cos(n \omega t),\quad \sin(n\omega t)\quad \text{com}\;\; (n=1,2,3,\dots)
+1,\quad \cos(n\omega_0 t),\quad \sin(n\omega_0 t)\quad \text{com}\;\; (n=1,2,3,\dots)\; \text{e } \omega_0 = \frac{2\pi}{P}
 $$
 
 formam um **sistema ortogonal** em $L^2([-T,T])$.
@@ -39,13 +39,13 @@ formam um **sistema ortogonal** em $L^2([-T,T])$.
 
 ## 3. Forma Trigonométrica da Série de Fourier
 
-Para $f$ periódico de período $P=2T$, definimos os **coeficientes**:
+Para $f$ periódico de período $P=2T$ e frequência natural $w_0 = \frac{2\pi}{P}$, definimos os **coeficientes**:
 
 $$
 \begin{aligned}
 a_0 &= \frac{1}{T}\int_{-T}^{T} f(t)\,dt,\\
-a_n &= \frac{1}{T}\int_{-T}^{T} f(t)\,\cos(n\omega t)\,dt,\quad n\ge1,\\
-b_n &= \frac{1}{T}\int_{-T}^{T} f(t)\,\sin(n\omega t)\,dt,\quad n\ge1.
+a_n &= \frac{1}{T}\int_{-T}^{T} f(t)\,\cos(n\omega_0 t)\,dt,\quad n\ge1,\\
+b_n &= \frac{1}{T}\int_{-T}^{T} f(t)\,\sin(n\omega_0 t)\,dt,\quad n\ge1.
 \end{aligned}
 $$
 
@@ -54,7 +54,7 @@ A **série de Fourier** de $f$ é então:
 $$
 \boxed{
 f(t)\sim \frac{a_0}{2}
-\;+\;\sum_{n=1}^{\infty}\bigl[a_n\cos(n\omega t)+b_n\sin(n\omega t)\bigr].
+\;+\;\sum_{n=1}^{\infty}\bigl[a_n\cos(n\omega_0 t)+b_n\sin(n\omega_0 t)\bigr].
 }
 $$
 
@@ -65,13 +65,13 @@ $$
 Em vez de seno e cosseno, usa-se a base completa de exponenciais:
 
 $$
-e^{jn\omega t},\quad n\in\mathbb{Z},
+e^{jn\omega_0 t},\quad n\in\mathbb{Z},\; w_0 = \frac{2\pi}{P},
 $$
 
 ortogonais em $L^2([-T,T])$. Definem‑se
 
 $$
-c_n = \frac{1}{2T}\int_{-T}^{T} f(t)\,e^{-jn\omega t}\,dt,
+c_n = \frac{1}{2T}\int_{-T}^{T} f(t)\,e^{-jn\omega_0 t}\,dt,
 \qquad n\in\mathbb{Z}.
 $$
 
@@ -79,7 +79,7 @@ A **série de Fourier complexa** é:
 
 $$
 \boxed{
-f(t)\sim \sum_{n=-\infty}^{\infty} c_n\,e^{jn\omega t}.
+f(t)\sim \sum_{n=-\infty}^{\infty} c_n\,e^{jn\omega_0 t}.
 }
 $$
 
@@ -101,7 +101,7 @@ $$
 
   $$
   S_N(t)
-  := \frac{a_0}{2} + \sum_{n=1}^N [a_n\cos(n\omega t)+b_n\sin(n\omega t)]
+  := \frac{a_0}{2} + \sum_{n=1}^N [a_n\cos(n\omega_0 t)+b_n\sin(n\omega_0 t)]
   \;\longrightarrow\;
   \frac{f(t^+)+f(t^-)}{2}
   \quad(N\to\infty).
@@ -113,16 +113,16 @@ $$
 
 ## 6. Desenvolvimento
 
-Seja $f(t)$ uma função periódica de período $P=2T$, assumamos que ela pode ser representada por um soma de funções periódicas ortogonais entre si. Em outras palavras, $f(t)$ pode ser projetada em bases periódicas ortogonais. Para este caso, utilizemos as seguintes bases:
+Seja $f(t)$ uma função periódica pertencente ao espaço Hilbertiano $\bigl(L^2([-T, T]), \langle \cdot,\cdot \rangle \bigr)$ e com período $P=2T$ e, portanto, frequência fundamental $\omega_0 = \frac{2\pi}{P}$, assumamos que ela pode ser representada por um soma de funções periódicas ortogonais entre si. Em outras palavras, $f(t)$ pode ser projetada em bases periódicas ortogonais. Para este caso, utilizemos as seguintes bases:
 
 $$
-\boxed{\;\cos(n \omega t),\quad \sin(n\omega t), \quad 1\;}\quad \text{com}\;\; (n=1,2,3,\dots)
+\boxed{\;\cos(n\omega_0 t),\quad \sin(n\omega_0 t), \quad 1\;}\quad \text{com}\;\; (n=1,2,3,\dots)
 $$
 
 Portanto:
 
 $$
-f(t) \sim \sum_{n=0}^\infty \bigl[a_n\cos(n\omega t)+b_n\sin(n\omega t)\bigr]
+f(t) \sim \sum_{n=0}^\infty \bigl[a_n\cos(n\omega_0 t)+b_n\sin(n\omega_0 t)\bigr]
 $$
 
 Agora precisamos descobrir quais os valores de $a_n$ e $b_n$, portanto, vamos projetar a função em cada uma das bases
@@ -132,40 +132,40 @@ $$
 \langle f, 1\rangle \;=\;\int_{-T}^{T} f(t)\,\overline{1}\,dt
 $$
 $$
-\therefore \int_{-T}^{T} f(t)\,dt = \int_{-T}^{T} \sum_{n=0}^\infty \bigl[a_n\cos(n\omega t)+b_n\sin(n\omega t)\bigr]\,dt = \int_{-T}^{T} a_0\,dt 
+\therefore \int_{-T}^{T} f(t)\,dt = \int_{-T}^{T} \sum_{n=0}^\infty \bigl[a_n\cos(n\omega_0 t)+b_n\sin(n\omega_0 t)\bigr]\,dt = \int_{-T}^{T} a_0\,dt 
 $$
 $$
-\text{Tendo em vista que:} \quad \forall n>0,\;\int_{-T}^{T} \cos(n\omega t)\,dt = \int_{-T}^{T} \sin(n\omega t)\,dt = 0
+\text{Tendo em vista que:} \quad \forall n>0,\;\int_{-T}^{T} \cos(n\omega_0 t)\,dt = \int_{-T}^{T} \sin(n\omega_0 t)\,dt = 0
 $$
 $$
 \therefore \int_{-T}^{T} f(t)\,dt = a_0 \cdot 2T \Rightarrow \boxed{2\cdot a_0 = \frac{1}{T}\int_{-T}^{T} f(t)\,dt}
 $$
 
-2. Base $\cos(n\omega t)$:
+2. Base $\cos(n\omega_0 t)$:
 
 Assumamos uma base $\cos(m\omega t)$:
 $$
 \langle f, \cos(m\omega t)\rangle \;=\;\int_{-T}^{T} f(t)\,\overline{\cos(m\omega t)}\,dt
 $$
 $$
-\therefore \int_{-T}^{T} f(t)\,\cos(m\omega t)\,dt = \frac{a_0}{2}\; +\; \sum_{n=1}^{\infty}\; \bigl[ a_n \int_{-T}^{T} \cos(n\omega t)\cos(m\omega t)\, dt\; +\; b_n \int_{-T}^{T} \sin(n\omega t)\cos(m\omega t)\, dt \bigr]
+\therefore \int_{-T}^{T} f(t)\,\cos(m\omega t)\,dt = \frac{a_0}{2}\; +\; \sum_{n=1}^{\infty}\; \bigl[ a_n \int_{-T}^{T} \cos(n\omega_0 t)\cos(m\omega t)\, dt\; +\; b_n \int_{-T}^{T} \sin(n\omega_0 t)\cos(m\omega t)\, dt \bigr]
 $$
 $$
-\text{Como }\cos(n\omega t)\, \text{é uma base ortogonal: }\; \int_{-T}^{T} \cos(n\omega t)\cos(m\omega t)\, dt = T\cdot\delta_{nm}, \quad\delta_{ij} = 
+\text{Como }\cos(n\omega_0 t)\, \text{é uma base ortogonal: }\; \int_{-T}^{T} \cos(n\omega_0 t)\cos(m\omega t)\, dt = T\cdot\delta_{nm}, \quad\delta_{ij} = 
 \begin{cases}
 1 & \text{if } i = j, \\
 0 & \text{if } i \ne j.
 \end{cases}
 $$
 $$
-\therefore \int_{-T}^{T} f(t)\,\cos(m\omega t)\,dt\; = \; a_n \cdot 1 \Rightarrow \boxed{a_n\, =\, \frac{1}{T}\int_{-T}^{T} f(t)\,\cos(n\omega t)\,dt}
+\therefore \int_{-T}^{T} f(t)\,\cos(m\omega t)\,dt\; = \; a_n \cdot 1 \Rightarrow \boxed{a_n\, =\, \frac{1}{T}\int_{-T}^{T} f(t)\,\cos(n\omega_0 t)\,dt}
 $$
-3. Por fim, para base $\sin(n\omega t)$ usamos a mesma lógica anterior:
+3. Por fim, para base $\sin(n\omega_0 t)$ usamos a mesma lógica anterior:
 $$
 \langle f, \sin(m\omega t)\rangle \;=\;\int_{-T}^{T} f(t)\,\overline{\sin(m\omega t)}\,dt
 $$
 $$
-\Rightarrow \boxed{b_n\, =\, \frac{1}{T}\int_{-T}^{T} f(t)\,\sin(n\omega t)\,dt}
+\Rightarrow \boxed{b_n\, =\, \frac{1}{T}\int_{-T}^{T} f(t)\,\sin(n\omega_0 t)\,dt}
 $$
 
 ### Síntese:
@@ -174,7 +174,7 @@ E assim chegamos ao valor de cada um dos valores dos coeficientes da fórmula da
 
 $$
 f(t) = \frac{a_0}{2}
-\;+\;\sum_{n=1}^{\infty}\bigl[a_n\cos(n\omega t)+b_n\sin(n\omega t)\bigr].
+\;+\;\sum_{n=1}^{\infty}\bigl[a_n\cos(n\omega_0 t)+b_n\sin(n\omega_0 t)\bigr].
 $$
 
 E para chegarmos na sua forma **Exponencial** precisamos apenas substituir os senos e cossenos por suas fórmulas exponenciais e atribuir $n$ a todos os Inteiros:
@@ -184,11 +184,11 @@ n \in \mathbb{Z}
 $$
 
 $$
-\cos(n\omega t)\, =\, \frac{e^{jn\omega t} + e^{-jn\omega t}}{2} 
+\cos(n\omega_0 t)\, =\, \frac{e^{jn\omega_0 t} + e^{-jn\omega_0 t}}{2} 
 $$
 
 $$
-\sin(n\omega t)\, =\, \frac{e^{jn\omega t} - e^{-jn\omega t}}{2j}
+\sin(n\omega_0 t)\, =\, \frac{e^{jn\omega_0 t} - e^{-jn\omega_0 t}}{2j}
 $$
 
 ---

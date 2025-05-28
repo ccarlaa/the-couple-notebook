@@ -1,71 +1,81 @@
-Certainly! Here's your sentence rewritten purely in formal mathematical notation:
+Com certeza, Victor. Aqui está a **definição completa e formal** do **Teorema de Plancherel**, no contexto da **Transformada de Fourier em $L^2(\mathbb{R})$**.
+
+---
+
+## 🔹 Enunciado formal do Teorema de Plancherel
+
+Seja $\mathcal{F}$ o operador de Transformada de Fourier, definido inicialmente para funções $x \in L^1(\mathbb{R}) \cap L^2(\mathbb{R})$ por:
 
 $$
-\exists \lambda_1, \dots, \lambda_n \in \mathbb{K},\; \text{nem todos nulos},\; \text{tais que} \; \sum_{i=1}^{n} \lambda_i v_i = \mathbf{0}_V
+\mathcal{F}\{x\}(\omega) = \int_{-\infty}^{\infty} x(t)\,e^{-j\omega t}\,dt,
 $$
 
-Or, more compactly and fully symbolized:
+então:
+
+### ✅ Existe uma **extensão única** e **unitária** de $\mathcal{F}$ para todo $L^2(\mathbb{R})$, denotada também por $\mathcal{F}: L^2(\mathbb{R}) \to L^2(\mathbb{R})$, tal que:
 
 $$
-\exists\, \lambda_1, \dots, \lambda_n \in \mathbb{K} \;\text{com}\; \big(\lambda_1, \dots, \lambda_n\big) \ne \mathbf{0} \;\text{tal que}\; \sum_{i=1}^n \lambda_i v_i = \mathbf{0}_V
-$$
-
-Where:
-
-* $\mathbb{K}$ is the underlying field (e.g., $\mathbb{R}$, $\mathbb{C}$, etc.),
-* $\mathbf{0}_V$ is the zero vector in the vector space $V$,
-* $v_1, \dots, v_n \in V$ are given vectors.
-
-Let me know if you also want the negation or the equivalent condition for linear **independence**.
-
-The **Kronecker delta**, denoted $\delta_{ij}$, is a function of two variables (typically integers $i$ and $j$) that equals 1 when the indices are equal and 0 otherwise. Formally:
-
-$$
-\delta_{ij} =
-\begin{cases}
-1 & \text{if } i = j, \\
-0 & \text{if } i \ne j.
-\end{cases}
+\boxed{
+\forall x \in L^2(\mathbb{R}), \quad
+\|\mathcal{F}\{x\}\|_{L^2(\mathbb{R})} = \|x\|_{L^2(\mathbb{R})}
+}
 $$
 
 ---
 
-### Properties
+## 🔹 Forma com produto interno
 
-1. **Identity in summations**:
+Em termos de produto interno, o teorema afirma:
 
-   $$
-   \sum_j \delta_{ij} a_j = a_i
-   $$
+$$
+\boxed{
+\forall x, y \in L^2(\mathbb{R}), \quad
+\langle \mathcal{F}\{x\}, \mathcal{F}\{y\} \rangle_{L^2}
+=
+\langle x, y \rangle_{L^2}
+}
+$$
 
-   It acts like a filter that "selects" the term where $j = i$.
+onde:
 
-2. **Matrix interpretation**:
-   In linear algebra, $\delta_{ij}$ is the element of the **identity matrix** $I$, where:
-
-   $$
-   I_{ij} = \delta_{ij}
-   $$
-
-3. **Orthogonality indicator**:
-   In inner product spaces, if $\langle \phi_i, \phi_j \rangle = \delta_{ij}$, then the set $\{\phi_k\}$ is an **orthonormal set**.
-
----
-
-### Example
-
-If you have a basis $\{e_1, e_2, e_3\}$ with inner product $\langle e_i, e_j \rangle = \delta_{ij}$, then:
-
-* $\langle e_1, e_1 \rangle = 1$,
-* $\langle e_1, e_2 \rangle = 0$,
-* $\langle e_2, e_3 \rangle = 0$,
-  and so on.
+$$
+\langle x, y \rangle_{L^2}
+=
+\int_{-\infty}^{\infty} x(t)\,\overline{y(t)}\,dt
+\quad \text{e} \quad
+\langle \mathcal{F}\{x\}, \mathcal{F}\{y\} \rangle
+=
+\int_{-\infty}^{\infty} X(\omega)\,\overline{Y(\omega)}\,d\omega.
+$$
 
 ---
 
-### Not to confuse with:
+## 🔹 Consequências
 
-* **Dirac delta** $\delta(x)$: a generalized function or distribution used in continuous settings.
-* **Heaviside function**: a step function, not related to the Kronecker delta.
+O Teorema de Plancherel implica que:
 
-Let me know if you want its generalization to tensors or its use in proofs.
+* $\mathcal{F}$ é um **operador unitário** no espaço de Hilbert $L^2(\mathbb{R})$
+* A transformada de Fourier é **bijetiva**, **linear**, e **isométrica** em $L^2(\mathbb{R})$
+* $$
+  \int_{-\infty}^{\infty}
+  |x(t)|^2\,dt =
+  \int_{-\infty}^{\infty}
+  |X(\omega)|^2\,d\omega
+  \quad \text{(conservação de energia)}
+  $$
+
+---
+
+## 🔹 Forma condensada
+
+$$
+\boxed{
+\mathcal{F} : L^2(\mathbb{R}) \to L^2(\mathbb{R})
+\text{ é unitária, i.e., }
+\langle \mathcal{F}x, \mathcal{F}y\rangle = \langle x, y\rangle
+}
+$$
+
+---
+
+Se quiser, posso também enunciar a versão do **Teorema de Plancherel** para $L^2(\mathbb{R}^n)$ ou em forma espectral para operadores autoadjuntos. Deseja que estendamos?

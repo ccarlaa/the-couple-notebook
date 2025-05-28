@@ -39,6 +39,6 @@ $$
    Um espaço vetorial normado $(E,\|\cdot\|)$ é **completo** se toda sequência de Cauchy em $E$ converge para algum limite em $E$. Quando $E$ é completo, chamamos $(E,\|\cdot\|)$ de **espaço de Banach**.
 
 <figure markdown="span">
-  ![Sequência de Cauchy](../assets/Cauchy_sequence_illustration.png){ width="500" align="center" }
+  ![Sequência de Cauchy](Cauchy_sequence_illustration.png){ width="500" align="center" }
   <figcaption>Imagem 1: Gráfico de uma sequência de Cauchy.</figcaption>
 </figure>
