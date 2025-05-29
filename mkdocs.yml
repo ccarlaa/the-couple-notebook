@@ -92,5 +92,13 @@ nav:
       - Espaço Hilbertiano: matematica/ial/espaco-hilbertiano.md
       - Projeção: matematica/ial/projecao.md
     - Análise:
+      - Série de Taylor: matematica/analysis/taylor-series.md
       - Série de Fourier: matematica/analysis/fourier-series.md
       - Transformada de Fourier: matematica/analysis/fourier-transform.md
+  - Princípios de Comunicação:
+    - Modulação: pricom/modulação.md
+    - Modulação AM:
+      - DSB-SC AM: pricom/am/dsbsc.md
+      - DSB-FC AM: pricom/am/dsbfc.md
+      - SSB AM: pricom/am/ssb.md
+      - VSB AM: pricom/am/vsb.md

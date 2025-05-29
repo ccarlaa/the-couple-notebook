@@ -167,7 +167,7 @@ $$
 
 $$
 \therefore\, 
-    f(t) = \frac{1}{2\pi}\, \int_{-\infty}^{\infty} \bigl[\int_{-\infty}^{\infty} f(t)\,e^{-j\omega t}\,dt \bigl]\, e^{j\omega t}\,dt
+    f(t) = \frac{1}{2\pi}\, \int_{-\infty}^{\infty} \bigl[\int_{-\infty}^{\infty} f(t)\,e^{-j\omega t}\,dt \bigl]\, e^{j\omega t}\,d\omega
 $$
 
 $$
@@ -176,4 +176,32 @@ $$
 }
 $$
 
+## 6. Tabela da Transformada de Fourier
 
+
+Abaixo está a tabela das transformadas em termos da frequência $\xi$ e da frequência angular $\omega$:
+
+| $f(t)$                                            | $\displaystyle \mathcal{F}\{f\}(\xi)$                                           | $\displaystyle \mathcal{F}\{f\}(\omega)$                                         |
+| ------------------------------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| **Impulso**<br>$\delta(t)$                        | 1                                                                               | 1                                                                                |
+| **Constante**<br>$1$                              | $\displaystyle \delta(\xi)$                                                     | $\displaystyle 2\pi\,\delta(\omega)$                                             |
+| **Exponencial complexo**<br>$e^{j2\pi\xi_0 t}$    | $\displaystyle \delta(\xi-\xi_0)$                                               | $\displaystyle 2\pi\,\delta(\omega-\omega_0)$                                    |
+| **Cosseno**<br>$\cos(2\pi\xi_0 t)$                | $\displaystyle \tfrac12\bigl[\delta(\xi-\xi_0)+\delta(\xi+\xi_0)\bigr]$         | $\displaystyle \pi\bigl[\delta(\omega-\omega_0)+\delta(\omega+\omega_0)\bigr]$   |
+| **Seno**<br>$\sin(2\pi\xi_0 t)$                   | $\displaystyle \tfrac{1}{2j}\bigl[\delta(\xi-\xi_0)-\delta(\xi+\xi_0)\bigr]$    | $\displaystyle \pi j\bigl[\delta(\omega+\omega_0)-\delta(\omega-\omega_0)\bigr]$ |
+| **Retangular**<br>$\mathrm{rect}(t/a)$            | $\displaystyle a\,\mathrm{sinc}(a\,\xi)$                                        | $\displaystyle a\,\mathrm{sinc}\bigl(\tfrac{\omega a}{2}\bigr)$                  |
+| **Triangular**<br>$\Lambda(t/a)$                  | $\displaystyle a\,\mathrm{sinc}^2(a\,\xi)$                                      | $\displaystyle a\,\mathrm{sinc}^2\bigl(\tfrac{\omega a}{2}\bigr)$                |
+| **Gaussiana**<br>$e^{-\pi t^2}$                   | $\displaystyle e^{-\pi \xi^2}$                                                  | $\displaystyle \sqrt{2\pi}\,e^{-\omega^2/2}$                                     |
+| **Gaussiana (σ)**<br>$e^{-t^2/(2\sigma^2)}$       | $\displaystyle \sigma\sqrt{2\pi}\,e^{-2\pi^2\sigma^2\xi^2}$                     | $\displaystyle \sigma\sqrt{2\pi}\,e^{-\sigma^2\omega^2/2}$                       |
+| **Decaimento**<br>$u(t)e^{-at}$                   | $\displaystyle \frac{1}{a + j2\pi\xi}$                                          | $\displaystyle \frac{1}{a + j\omega}$                                            |
+| **Deslocamento**<br>$f(t-t_0)$                    | $\displaystyle e^{-j2\pi\xi t_0}\,F(\xi)$                                  | $\displaystyle e^{-j\omega t_0}\,F(\omega)$                                      |
+| **Modulação**<br>$f(t)\,e^{j2\pi\xi_0 t}$         | $\displaystyle F(\xi-\xi_0)$                                               | $\displaystyle F(\omega-\omega_0)$                                               |
+| **Derivada**<br>$f'(t)$                           | $\displaystyle j2\pi\xi\,\hat f(\xi)$                                           | $\displaystyle j\omega\,F(\omega)$
+| **nth Derivative**<br> $f^{(n)}(t)$               | $\displaystyle (j2\pi\xi)^n\, F(\xi)$                                           | $\displaystyle (j\omega)^n\, F(\omega)$
+| **Exponencial do Tempo**<br> $t^n\,f(t)$          | $\displaystyle \bigl(\frac{j}{2\pi}\bigr)^n\, \frac{d^nF(\xi)}{d\xi^n}$         | $\displaystyle j^n\, \frac{d^nF(\omega)}{d\omega^n}$
+| **Integração**<br>$\int_{-\infty}^t f(\tau)d\tau$ | $\displaystyle \frac{1}{j2\pi\xi}\,F(\xi)\;+\;F(0)\,\delta(\xi)$ | $\displaystyle \frac{1}{j\omega}\,F(\omega)\;+\;2\pi\,F(0)\,\delta(\omega)$       |
+| **Convolução**<br>$f * g$                         | $\displaystyle F(\xi)\,\cdot\,G(\xi)$                                 | $\displaystyle F(\omega)\,\cdot\,G(\omega)$                                      |
+
+Lembrete de conversão:
+$\displaystyle \omega = 2\pi\,\xi$, $\quad \xi = \tfrac{\omega}{2\pi}$.
+
+Fonte [aqui](https://en.wikipedia.org/wiki/Fourier_transform#Tables_of_important_Fourier_transforms)
