@@ -1,81 +1,23 @@
-Com certeza, Victor. Aqui está a **definição completa e formal** do **Teorema de Plancherel**, no contexto da **Transformada de Fourier em $L^2(\mathbb{R})$**.
+Se os vigilantes forem considerados pessoas distintas, procedemos assim:
 
----
+1. **O posto principal deve estar ocupado.** Primeiro, escolhemos qual dos 4 vigilantes ficará no posto principal: são 4 possibilidades.
 
-## 🔹 Enunciado formal do Teorema de Plancherel
+2. **Distribuição dos demais 3 vigilantes nos outros 6 postos:**
 
-Seja $\mathcal{F}$ o operador de Transformada de Fourier, definido inicialmente para funções $x \in L^1(\mathbb{R}) \cap L^2(\mathbb{R})$ por:
+   * Das 6 vagas restantes, precisamos escolher 3 para abrigar os outros 3 vigilantes. Isso pode ser feito de $\binom{6}{3}=20$ maneiras (escolhemos 3 postos dentre os 6).
+   * Para cada escolha de 3 postos, ainda temos que decidir qual vigilante vai para qual posto. Como são 3 vigilantes distintos e 3 postos, há $3!=6$ maneiras de atribuição.
 
-$$
-\mathcal{F}\{x\}(\omega) = \int_{-\infty}^{\infty} x(t)\,e^{-j\omega t}\,dt,
-$$
-
-então:
-
-### ✅ Existe uma **extensão única** e **unitária** de $\mathcal{F}$ para todo $L^2(\mathbb{R})$, denotada também por $\mathcal{F}: L^2(\mathbb{R}) \to L^2(\mathbb{R})$, tal que:
+Portanto, o número total de formas é:
 
 $$
-\boxed{
-\forall x \in L^2(\mathbb{R}), \quad
-\|\mathcal{F}\{x\}\|_{L^2(\mathbb{R})} = \|x\|_{L^2(\mathbb{R})}
-}
+\underbrace{4}_{\substack{\text{escolha do vigilante}\\\text{do posto principal}}}
+\times
+\underbrace{\binom{6}{3}}_{20}
+\times
+\underbrace{3!}_{6}
+\;=\;
+4 \times 20 \times 6 \;=\; 480.
 $$
 
----
+Logo, existem **480** maneiras de distribuir os 4 vigilantes nos 7 postos, garantindo que o posto principal fique sempre ocupado.
 
-## 🔹 Forma com produto interno
-
-Em termos de produto interno, o teorema afirma:
-
-$$
-\boxed{
-\forall x, y \in L^2(\mathbb{R}), \quad
-\langle \mathcal{F}\{x\}, \mathcal{F}\{y\} \rangle_{L^2}
-=
-\langle x, y \rangle_{L^2}
-}
-$$
-
-onde:
-
-$$
-\langle x, y \rangle_{L^2}
-=
-\int_{-\infty}^{\infty} x(t)\,\overline{y(t)}\,dt
-\quad \text{e} \quad
-\langle \mathcal{F}\{x\}, \mathcal{F}\{y\} \rangle
-=
-\int_{-\infty}^{\infty} X(\omega)\,\overline{Y(\omega)}\,d\omega.
-$$
-
----
-
-## 🔹 Consequências
-
-O Teorema de Plancherel implica que:
-
-* $\mathcal{F}$ é um **operador unitário** no espaço de Hilbert $L^2(\mathbb{R})$
-* A transformada de Fourier é **bijetiva**, **linear**, e **isométrica** em $L^2(\mathbb{R})$
-* $$
-  \int_{-\infty}^{\infty}
-  |x(t)|^2\,dt =
-  \int_{-\infty}^{\infty}
-  |X(\omega)|^2\,d\omega
-  \quad \text{(conservação de energia)}
-  $$
-
----
-
-## 🔹 Forma condensada
-
-$$
-\boxed{
-\mathcal{F} : L^2(\mathbb{R}) \to L^2(\mathbb{R})
-\text{ é unitária, i.e., }
-\langle \mathcal{F}x, \mathcal{F}y\rangle = \langle x, y\rangle
-}
-$$
-
----
-
-Se quiser, posso também enunciar a versão do **Teorema de Plancherel** para $L^2(\mathbb{R}^n)$ ou em forma espectral para operadores autoadjuntos. Deseja que estendamos?
