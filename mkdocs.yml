@@ -85,6 +85,8 @@ nav:
       - Transformação Linear: matematica/conceitos-gerais/transformacao-linear.md
       - Determinante: matematica/conceitos-gerais/determinante.md
       - Combinação Linear: matematica/conceitos-gerais/combinacao-linear.md
+    - Topologia:
+      - Espaço: matematica/topology/espaco-metrico.md
     - Álgebra Linear: 
       - Teorema Fundamental da Álgebra: matematica/ial/tfa.md
       - Norma: matematica/ial/norma.md
