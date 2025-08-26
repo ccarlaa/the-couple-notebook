@@ -89,6 +89,7 @@ nav:
       - Espaço: matematica/topology/espaco-metrico.md
     - Álgebra Linear: 
       - Teorema Fundamental da Álgebra: matematica/ial/tfa.md
+      - Espaço Vetorial: matematica/ial/espaco-vetorial.md
       - Norma: matematica/ial/norma.md
       - Base do Espaço Vetorial: matematica/ial/base.md
       - Espaço Hilbertiano: matematica/ial/espaco-hilbertiano.md
