@@ -2,43 +2,41 @@
 
 ## Definição Formal
 
-Seja $K$ um conjunto não vazio com duas leis de composição interna:
+Seja $\mathbb{K}$ um conjunto não vazio com duas leis de composição interna:
 
-* **adição**: $+ : K \times K \to K$,
-* **multiplicação**: $\cdot : K \times K \to K$.
+* **adição**: $+ : \mathbb{K} \times \mathbb{K} \to \mathbb{K}$,
+* **multiplicação**: $\cdot : \mathbb{K} \times \mathbb{K} \to \mathbb{K}$.
 
-Chamamos $(K, +, \cdot)$ de um **corpo** (ou **field**, em inglês) se as seguintes propriedades forem satisfeitas:
-
----
+Chamamos $(\mathbb{K}, +, \cdot)$ de um **corpo** (ou **field**, em inglês) se as seguintes propriedades forem satisfeitas:
 
 ## Propriedades:
 
 ### 1. Soma:
 
-$(K, +)$ é um **grupo abeliano**
+$(\mathbb{K}, +)$ é um **grupo abeliano**
 
-* **Associatividade**: $\forall a,b,c\in K,\; (a+b)+c = a+(b+c)$,
-* **Elemento neutro aditivo**: $\exists 0\in K,\; \forall a\in K,\; a+0 = 0+a = a$,
-* **Inverso aditivo**: $\forall a\in K,\; \exists -a\in K,\; a + (-a) = 0$,
-* **Comutatividade**: $\forall a,b\in K,\; a+b = b+a$.
+* **Associatividade**: $\forall a,b,c\in \mathbb{K},\; (a+b)+c = a+(b+c)$,
+* **Elemento neutro aditivo**: $\exists 0\in \mathbb{K},\; \forall a\in \mathbb{K},\; a+0 = 0+a = a$,
+* **Inverso aditivo**: $\forall a\in \mathbb{K},\; \exists -a\in \mathbb{K},\; a + (-a) = 0$,
+* **Comutatividade**: $\forall a,b\in \mathbb{K},\; a+b = b+a$.
 
 ---
 
 ### 2. Multiplicação:
 
-$(K^*, \cdot)$ é um **grupo abeliano**, onde $K^* = K \setminus \{0\}$
+$(\mathbb{K}^*, \cdot)$ é um **grupo abeliano**, onde $\mathbb{K}^* = \mathbb{K} \setminus \{0\}$
 
-* **Associatividade**: $\forall a,b,c\in K^*,\; (a\cdot b)\cdot c = a\cdot(b\cdot c)$,
-* **Elemento neutro multiplicativo**: $\exists 1\in K,\; 1\ne 0,\; \forall a\in K,\; a\cdot 1 = 1\cdot a = a$,
-* **Inverso multiplicativo**: $\forall a\in K^*,\; \exists a^{-1}\in K,\; a\cdot a^{-1} = 1$,
-* **Comutatividade**: $\forall a,b\in K^*,\; a\cdot b = b\cdot a$.
+* **Associatividade**: $\forall a,b,c\in \mathbb{K}^*,\; (a\cdot b)\cdot c = a\cdot(b\cdot c)$,
+* **Elemento neutro multiplicativo**: $\exists 1\in \mathbb{K},\; 1\ne 0,\; \forall a\in \mathbb{K},\; a\cdot 1 = 1\cdot a = a$,
+* **Inverso multiplicativo**: $\forall a\in \mathbb{K}^*,\; \exists a^{-1}\in \mathbb{K},\; a\cdot a^{-1} = 1$,
+* **Comutatividade**: $\forall a,b\in \mathbb{K}^*,\; a\cdot b = b\cdot a$.
 
 ---
 
 ### 3. **Distributividade**:
 
 $$
-\forall a,b,c\in K,\quad a\cdot(b+c) = a\cdot b + a\cdot c.
+\forall a,b,c\in \mathbb{K},\quad a\cdot(b+c) = a\cdot b + a\cdot c.
 $$
 
 ---

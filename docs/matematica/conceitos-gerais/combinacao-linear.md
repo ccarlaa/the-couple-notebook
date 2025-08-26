@@ -12,7 +12,7 @@
 
 ## 1. Definição Formal
 
-Seja $(V, K, +, \cdot)$ um espaço vetorial sobre um corpo $K$. Se $v_1, \dots, v_n \in V$ e $\lambda_1, \dots, \lambda_n \in K$, então o vetor
+Seja $(V, \mathbb{K}, +, \cdot)$ um espaço vetorial sobre um corpo $\mathbb{K}$. Se $v_1, \dots, v_n \in V$ e $\lambda_1, \dots, \lambda_n \in \mathbb{K}$, então o vetor
 
 $$
 v := \lambda_1 v_1 + \lambda_2 v_2 + \dots + \lambda_n v_n
@@ -24,7 +24,7 @@ Denotamos o **conjunto de todas as combinações lineares** de $v_1,\dots,v_n$ p
 
 $$
 \operatorname{span}\{v_1, \dots, v_n\}
-:= \left\{ \sum_{i=1}^{n} \lambda_i v_i \;\middle|\; \lambda_i \in K \right\}.
+:= \left\{ \sum_{i=1}^{n} \lambda_i v_i \;\middle|\; \lambda_i \in \mathbb{K} \right\}.
 $$
 
 Também chamado de **Subespaço Gerado**.
@@ -36,7 +36,7 @@ Também chamado de **Subespaço Gerado**.
 O conjunto de vetores $\{v_1, \dots, v_n\} \subseteq V$ é dito **linearmente dependente** se:
 
 $$
-\exists\, \lambda_1, \dots, \lambda_n \in \mathbb{K} \;,\; \big(\lambda_1, \dots, \lambda_n\big) \ne \mathbf{0} \;:\; 
+\exists\, \lambda_i \in \mathbb{K} \, ,\, 1 \le i \le N \quad \text{tal que} \quad \lambda_i \neq 0\, \; \quad \text{para} \quad 
 \sum_{i=1}^n \lambda_i v_i = \mathbf{0}_V
 $$
 Ou seja, existe uma **combinação linear não trivial** que resulta no vetor nulo.

@@ -72,7 +72,10 @@ Dado $\langle\cdot,\cdot\rangle$, definimos:
 * **Distância**
 
   $$
-    d(u,v) \;=\;\|u - v\|.
+    d : V \times V \longrightarrow \mathbb{R}_+
+  $$
+  $$
+    (u, v) \mapsto d(u,v) \;=\;\|u - v\|.
   $$
 
 * **Ângulo**
@@ -86,7 +89,15 @@ Dado $\langle\cdot,\cdot\rangle$, definimos:
 
 ---
 
-## 4. Exemplos Canônicos
+## 4. Ortogonalidade
+
+Diz-se que os vetores $u$ e $v$ são **ortogonais** se:
+
+$$
+  \forall\, v, u \in V, \quad \langle u, v \rangle = 0 \Longleftrightarrow u \perp v
+$$
+
+## 5. Exemplos Canônicos
 
 1. **$\mathbb{R}^n$ real**
    $\displaystyle \langle u,v\rangle = \sum_{i=1}^n u_i\,v_i.$

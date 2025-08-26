@@ -1,5 +1,8 @@
-**Resumo (explicação simples)**
-Uma **transformação linear** (ou **aplicação linear**, ou **morfismo de espaços vetoriais**) é uma função entre dois espaços vetoriais que preserva soma de vetores e multiplicação por escalares. Em termos geométricos, ela “respeita” a estrutura de combinações lineares.
+# Transformação Linear
+
+**Resumo**
+
+Uma **transformação linear** (ou **aplicação linear**) é uma função entre dois espaços vetoriais que preserva soma de vetores e multiplicação por escalares. Em termos geométricos, ela “respeita” a estrutura de combinações lineares.
 
 ---
 
@@ -8,39 +11,31 @@ Uma **transformação linear** (ou **aplicação linear**, ou **morfismo de espa
 Sejam
 
 $$
-(V, K, +_V, \bullet_V)
+(V, \mathbb{K}, +, \cdot)
 \quad\text{e}\quad
-(W, K, +_W, \bullet_W)
+(W, \mathbb{K}, +, \cdot)
 $$
 
-espaços vetoriais sobre o mesmo corpo $K$. Uma aplicação
+espaços vetoriais sobre o mesmo corpo $\mathbb{K}$. Uma aplicação
 
 $$
-T\colon V \;\longrightarrow\; W
+T\colon V \longrightarrow W
 $$
 
-é chamada **transformação linear** se, e somente se, para todos $u,v\in V$ e todo $\lambda\in K$ valem os dois axiomas:
+é chamada **transformação linear** se, e somente se, para todos $u,v\in V$ e todo $\lambda\in \mathbb{K}$ valem os dois axiomas:
 
 1. **Aditividade**
 
    $$
-   T(u +_V v) \;=\; T(u) +_W T(v).
+   T(u + v) \;=\; T(u) + T(v).
    $$
 
 2. **Homogeneidade (ou compatibilidade escalar)**
 
    $$
-   T(\lambda \bullet_V v) \;=\; \lambda \bullet_W T(v).
+   T(\lambda \cdot v) \;=\; \lambda \cdot T(v).
    $$
 
-Em notação compacta, pode-se escrever:
-
-$$
-\forall\,u,v\in V,\;\forall\,\lambda\in K,\quad
-T(u + v) = T(u) + T(v),
-\quad
-T(\lambda v) = \lambda\,T(v).
-$$
 
 ---
 
@@ -50,7 +45,7 @@ $$
 
   $$
     \ker T 
-    := \{\,v\in V \mid T(v) = 0_W\}.
+    := \{\,v\in V \mid T(v) = 0\}.
   $$
 * **Imagem** ($\operatorname{Im} T$)
 
@@ -60,7 +55,7 @@ $$
   $$
 * **Propriedades**
 
-  * $T$ é **injetora** ⟺ $\ker T = \{0_V\}$.
+  * $T$ é **injetora** ⟺ $\ker T = \{0\}$.
   * $T$ é **sobrejetora** ⟺ $\operatorname{Im}T = W$.
   * **Teorema da dimensão** (caso $\dim V < \infty$):
     $\displaystyle \dim V = \dim(\ker T) + \dim(\operatorname{Im}T).$
@@ -70,10 +65,10 @@ $$
 ## Exemplos
 
 1. **Mapa identidade**
-   $\displaystyle \mathrm{id}_V\colon V\to V,\;\mathrm{id}_V(v)=v$.
+   $\displaystyle \mathrm{id}\colon V\to V,\;\mathrm{id}(v)=v$.
 
 2. **Mapa nulo**
-   $\displaystyle T\colon V\to W,\;T(v)=0_W$ para todo $v\in V$.
+   $\displaystyle T\colon V\to W,\;T(v)=0$ para todo $v\in V$.
 
 3. **Multiplicação por matriz**
    Se $A\in M_{m\times n}(K)$, então

@@ -2,7 +2,7 @@
 
 ## 1. Definição 
 
-Seja $(V, K, +, \cdot)$ um espaço vetorial sobre um corpo $K$, um conjunto de vetores $B \subseteq V$ é dito uma **base** de $V$ se satisfaz as duas condições seguintes:
+Seja $(V, \mathbb{K}, +, \cdot)$ um espaço vetorial, um conjunto de vetores $B \subseteq V$ é dito uma **base** de $V$ se satisfaz as duas condições seguintes:
 
 1. **Geração** (ou *spanning*):
 
@@ -10,7 +10,7 @@ $B$ gera $V$:
    $$
    \operatorname{span}(B) = V,
    \quad \text{isto é,} \quad
-   \forall v \in V,\; \exists\; b_1,\dots,b_n \in B,\; \lambda_1,\dots,\lambda_n \in K
+   \forall v \in V,\; \exists\; b_1,\dots,b_n \in B,\; \lambda_1,\dots,\lambda_n \in \mathbb{K}
    \;\text{ tais que }\;
    v = \sum_{i=1}^{n} \lambda_i b_i.
    $$
@@ -35,13 +35,6 @@ $$
 
 ## 3. Consequências
 
-* Todo vetor $v \in V$ admite **uma única** combinação linear dos elementos da base:
-
-  $$
-  v = \sum_{i=1}^{n} \lambda_i v_i
-  \quad \text{com } \lambda_i \in K \text{ únicos}.
-  $$
-
 * Se $V$ admite uma base finita com $n$ elementos, diz-se que $V$ é **de dimensão finita**, e define-se:
 
   $$
@@ -52,7 +45,7 @@ $$
 
 ## Base Ortogonal
 
-Seja $V$ um **espaço vetorial com produto interno** $\langle \cdot,\cdot \rangle$ sobre um corpo $\mathbb{K} \in \{\mathbb{R},\mathbb{C}\}$.
+Seja $V$ um espaço vetorial com produto interno $\langle \cdot,\cdot \rangle$ sobre um corpo $\mathbb{K} \in \{\mathbb{R},\mathbb{C}\}$.
 
 Um subconjunto $\mathcal{B} = \{v_1, v_2, \dots, v_n\} \subseteq V$ é uma **base ortogonal** de $V$ se:
 
@@ -70,7 +63,7 @@ Um subconjunto $\mathcal{B} = \{v_1, v_2, \dots, v_n\} \subseteq V$ é uma **bas
 E também, se, além disso,
 
 $$
-\forall i,\quad \|v_i\| = \sqrt{\langle v_i, v_i \rangle} = 1,
+\forall i,\quad \|v_i\| = 1,
 $$
 
 então $\mathcal{B}$ é uma **base ortonormal**.
@@ -80,16 +73,16 @@ então $\mathcal{B}$ é uma **base ortonormal**.
 ### Observações
 
 * Em qualquer espaço euclidiano (como $\mathbb{R}^n$ com produto interno usual), **existe uma base ortonormal** (por exemplo, via processo de Gram-Schmidt).
-* Em uma base ortogonal $\mathcal{B} = \{v_1, \dots, v_n\}$, todo vetor $v \in V$ pode ser escrito como:
+* Em uma base ortogonal $\mathcal{B} = \{b_1, \dots, b_n\}$ de $V$, todo vetor $v \in V$ pode ser escrito como:
 
   $$
-  v = \sum_{i=1}^n \frac{\langle v, v_i \rangle}{\langle v_i, v_i \rangle} \, v_i.
+  v = \sum_{i=1}^n \frac{\langle v, b_i \rangle}{\|b_n\|} \, b_i.
   $$
 
   No caso ortonormal, essa fórmula se simplifica para:
 
   $$
-  v = \sum_{i=1}^n \langle v, v_i \rangle \, v_i.
+  v = \sum_{i=1}^n \langle v, b_i \rangle \, b_i.
   $$
 
 ---

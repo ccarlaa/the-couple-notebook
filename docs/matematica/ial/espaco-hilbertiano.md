@@ -2,26 +2,30 @@
 
 ## 1. Definição Formal
 
-Seja $\mathcal{H}$ um espaço vetorial sobre o corpo $\mathbb{K}$ (onde $\mathbb{K} = \mathbb{R}$ ou $\mathbb{C}$), equipado com um produto interno $\langle \cdot, \cdot \rangle: \mathcal{H} \times \mathcal{H} \to \mathbb{K}$. O espaço $\mathcal{H}$ é chamado de **espaço de Hilbert** se for completo em relação à norma induzida pelo produto interno, definida por:
+Seja $\mathcal{H}$ um espaço vetorial sobre o corpo $\mathbb{K}$, equipado com um produto interno $\langle \cdot, \cdot \rangle: \mathcal{H} \times \mathcal{H} \to \mathbb{K}$. O espaço $\mathcal{H}$ é chamado de **espaço de Hilbert** se for completo em relação à **norma induzida** pelo produto interno, definida por:
 
 $$
-\|x\| = \sqrt{\langle x, x \rangle}, \quad \forall x \in \mathcal{H}.
+\forall v \in \mathcal{H}\,, \quad \|v\| = \sqrt{\langle v, v \rangle}.
 $$
 
 A completude significa que toda sequência de Cauchy em $\mathcal{H}$ converge para um elemento em $\mathcal{H}$ com respeito à norma $\| \cdot \|$, ou seja, para cada 2 elementos existe um outro entre eles na qual a distância para qualquer dos 2 elementos é menor que a distância entre eles.
 
-## 2. Norma Induzida e Desigualdade de Cauchy-Schwarz
+Caso o espaço não chega completo, ele é chamado de **Espaço pré-Hilbertiano**.
 
-A norma induzida pelo produto interno é dada por:
+## 2. Desigualdade Triangular e de Cauchy-Schwarz
 
-$$
-\|x\| = \sqrt{\langle x, x \rangle}.
-$$
+Para todo Espaço Hilbertiano $V$.
 
-Essa norma satisfaz a **desigualdade de Cauchy-Schwarz**:
+A norma satisfaz a **Desigualdade de Cauchy-Schwarz**:
 
 $$
-|\langle x, y \rangle| \leq \|x\| \cdot \|y\|, \quad \forall x, y \in \mathcal{H}.
+\forall v, w \in \mathcal{H}\,, \quad |\langle x, y \rangle|\; \leq\; \|x\| \cdot \|y\|.
+$$
+
+E a **Desigualdade Triangular**:
+
+$$
+    \|v + w\|\; \le\; \|v\| + \|w\|
 $$
 
 ## 3. Exemplos de Espaços de Hilbert

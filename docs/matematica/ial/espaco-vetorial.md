@@ -9,13 +9,13 @@ Consideremos um [Espaço](../conceitos-gerais/espacos.md) com coordenadas e em q
 Um **espaço vetorial** é uma quádrupla
 
 $$
-(V, K, +, \cdot)
+(V, \mathbb{K}, +, \cdot)
 $$
 
 tal que:
 
-1. $V$ é um conjunt de vetores;
-2. $K$ é um conjunto de números em um **corpo**;
+1. $V \neq \varnothing$ é um conjunto de vetores;
+2. $\mathbb{K}$ são elementos de um **corpo**;
 
 E estão definidas duas operações:
 
@@ -37,10 +37,10 @@ Para todos $u, v, w \in V$ e $\alpha, \beta \in \mathbb{K}$:
    $u + v = v + u$
 
 3. **Elemento neutro da adição**:
-   Existe $0 \in V$ tal que $u + 0 = u$
+   Existe $0_V \in V$ tal que $u + 0 = u$
 
 4. **Inverso aditivo**:
-   Para cada $u\in V$, existe $(-u)\in V$ tal que $u + (-u) = 0$
+   Para cada $u\in V$, existe $(-u)\in V$ tal que $u + (-u) = 0_V$
 
 5. **Compatibilidade da multiplicação escalar**:
    $\alpha(\beta v) = (\alpha\beta)v$
