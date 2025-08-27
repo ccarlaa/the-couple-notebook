@@ -18,7 +18,7 @@
         <link rel="prev" href="../espaco-hilbertiano/">
       
       
-        <link rel="next" href="../../analysis/taylor-series/">
+        <link rel="next" href="../../statistics/espaco-amostral/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -536,6 +536,46 @@
   
   
     <li class="md-nav__item">
+      <a href="../../conceitos-gerais/produto-cartesiano/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Produto Cartesiano
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceitos-gerais/funcao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Função
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../conceitos-gerais/polinomios/" class="md-nav__link">
         
   
@@ -616,11 +656,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../conceitos-gerais/produto-cartesiano/" class="md-nav__link">
+      <a href="../../conceitos-gerais/sigma-algebra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Produto Cartesiano
+    Sigma-Álgebra
   </span>
   
 
@@ -1012,11 +1052,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-projecao-linear-geral" class="md-nav__link">
-    1. Projeção Linear Geral
+  <a href="#1-projecao-linear" class="md-nav__link">
+    1. Projeção Linear
   </a>
   
-    <nav class="md-nav" aria-label="1. Projeção Linear Geral">
+    <nav class="md-nav" aria-label="1. Projeção Linear">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1097,7 +1137,7 @@
             
   
   <span class="md-ellipsis">
-    Análise
+    Probabilidade e Estatística
   </span>
   
 
@@ -1106,6 +1146,70 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Probabilidade e Estatística
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistics/espaco-amostral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Espaço Amostral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Análise
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Análise
           </label>
@@ -1461,14 +1565,18 @@
 <h1 id="projecao">Projeção</h1>
 <p>Uma <strong>projeção</strong> em Álgebra Linear é um operador linear que “projeta” vetores de um espaço <span class="arithmatex">\(V\)</span> sobre um subespaço <span class="arithmatex">\(W\subseteq V\)</span>, deixando intacta a componente em <span class="arithmatex">\(W\)</span> e anulando a componente em um complemento.</p>
 <hr />
-<h2 id="1-projecao-linear-geral">1. Projeção Linear Geral</h2>
-<p>Seja <span class="arithmatex">\((V,K,+,\cdot)\)</span> um espaço vetorial e <span class="arithmatex">\(P\colon V\to V\)</span> uma aplicação linear. Dizemos que <span class="arithmatex">\(P\)</span> é uma <strong>projeção</strong> se, e somente se,</p>
+<h2 id="1-projecao-linear">1. Projeção Linear</h2>
+<p>Seja <span class="arithmatex">\((V,K,+,\cdot)\)</span> um espaço vetorial pré-Hilbertiano e <span class="arithmatex">\(P\colon V\to V\)</span> uma aplicação linear. Dizemos que <span class="arithmatex">\(P\)</span> é uma <strong>projeção</strong> se, e somente se,</p>
 <div class="arithmatex">\[
 P^2 = P,
 \]</div>
 <p>isto é,</p>
 <div class="arithmatex">\[
 \forall v\in V,\quad P\bigl(P(v)\bigr) = P(v).
+\]</div>
+<p>E definimos a projeção de <span class="arithmatex">\(w\)</span> em <span class="arithmatex">\(v \ne 0\)</span> por:</p>
+<div class="arithmatex">\[
+  P_v(w) :=\, \frac{\langle w, v \rangle}{\|v\|^2}\, v
 \]</div>
 <p><strong>Propriedades equivalentes</strong>:</p>
 <ul>
@@ -1509,7 +1617,7 @@ P^2 = P,
 <p>Então <span class="arithmatex">\(P_{W,U}^2 = P_{W,U}\)</span>, <span class="arithmatex">\(\operatorname{Im}(P_{W,U}) = W\)</span>, <span class="arithmatex">\(\ker(P_{W,U}) = U\)</span>.</p>
 <hr />
 <h2 id="2-projecao-ortogonal-em-espaco-com-produto-interno">2. Projeção Ortogonal em Espaço com Produto Interno</h2>
-<p>Se <span class="arithmatex">\(V\)</span> é um espaço vetorial sobre <span class="arithmatex">\(K\)</span> dotado de um <strong>produto interno</strong> <span class="arithmatex">\(\langle\cdot,\cdot\rangle\)</span>, e <span class="arithmatex">\(W\subseteq V\)</span> é um subespaço (finito gerado), a <strong>projeção ortogonal</strong> de <span class="arithmatex">\(v\in V\)</span> sobre <span class="arithmatex">\(W\)</span> é o vetor <span class="arithmatex">\(P_W(v)\in W\)</span> tal que</p>
+<p>Se <span class="arithmatex">\(V\)</span> é um espaço vetorial sobre <span class="arithmatex">\(\mathbb{K}\)</span> dotado de um <strong>produto interno</strong> <span class="arithmatex">\(\langle\cdot,\cdot\rangle\)</span>, e <span class="arithmatex">\(W\subseteq V\)</span> é um subespaço (finito gerado), a <strong>projeção ortogonal</strong> de <span class="arithmatex">\(v\in V\)</span> sobre <span class="arithmatex">\(W\)</span> é o vetor <span class="arithmatex">\(P_W(v)\in W\)</span> tal que</p>
 <ol>
 <li>
 <p><span class="arithmatex">\(v - P_W(v)\)</span> pertence ao <strong>ortogonal</strong> <span class="arithmatex">\(W^\perp\)</span>, i.e.
@@ -1520,12 +1628,11 @@ P^2 = P,
 </li>
 </ol>
 <h3 id="21-formula-em-base-ortonormal">2.1. Fórmula em base ortonormal</h3>
-<p>Se <span class="arithmatex">\(\{e_1,\dots,e_k\}\)</span> é uma base <strong>ortonormal</strong> de <span class="arithmatex">\(W\)</span>, então para todo <span class="arithmatex">\(v\in V\)</span>:</p>
+<p>Se <span class="arithmatex">\(\{b_1,\dots,b_N\}\)</span> é uma base <strong>ortonormal</strong> de <span class="arithmatex">\(V\)</span>, então para todo <span class="arithmatex">\(v\in V\)</span>:</p>
 <div class="arithmatex">\[
-P_W(v)
-= \sum_{i=1}^{k} \langle v,\,e_i\rangle\,e_i.
+v
+= \sum_{i=1}^{N} P_{w_i}(v).
 \]</div>
-<p>Nesse caso, <span class="arithmatex">\(P_W\)</span> satisfaz <span class="arithmatex">\(P_W^2 = P_W\)</span> e é <strong>autoadjunto</strong> (<span class="arithmatex">\(P_W = P_W^*\)</span>).</p>
 <hr />
 <h2 id="3-exemplos">3. Exemplos</h2>
 <ol>
@@ -1600,13 +1707,13 @@ P_W(v)
         
         
           
-          <a href="../../analysis/taylor-series/" class="md-footer__link md-footer__link--next" aria-label="Next: Série de Taylor">
+          <a href="../../statistics/espaco-amostral/" class="md-footer__link md-footer__link--next" aria-label="Next: Espaço Amostral">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Série de Taylor
+                Espaço Amostral
               </div>
             </div>
             <div class="md-footer__button md-icon">
