@@ -74,11 +74,13 @@ nav:
       - Grupo: matematica/conceitos-gerais/grupo.md
       - Anel:  matematica/conceitos-gerais/anel.md
       - Corpo: matematica/conceitos-gerais/corpo.md
+      - Produto Cartesiano: matematica/conceitos-gerais/produto-cartesiano.md
+      - Função: matematica/conceitos-gerais/funcao.md
       - Polinômios: matematica/conceitos-gerais/polinomios.md
       - Função Polinomial: matematica/conceitos-gerais/funcao_polinomial.md
       - Espaços: matematica/conceitos-gerais/espacos.md
       - K-Álgebra: matematica/conceitos-gerais/k-algebra.md
-      - Produto Cartesiano: matematica/conceitos-gerais/produto-cartesiano.md
+      - Sigma-Álgebra: matematica/conceitos-gerais/sigma-algebra.md
       - Produto Interno: matematica/conceitos-gerais/produto-interno.md 
       - Sequência de Cauchy: matematica/conceitos-gerais/cauchy-sequence.md
       - Matrizes: matematica/conceitos-gerais/matrizes.md
@@ -94,6 +96,8 @@ nav:
       - Base do Espaço Vetorial: matematica/ial/base.md
       - Espaço Hilbertiano: matematica/ial/espaco-hilbertiano.md
       - Projeção: matematica/ial/projecao.md
+    - Probabilidade e Estatística:
+      - Espaço Amostral: matematica/statistics/espaco-amostral.md
     - Análise:
       - Série de Taylor: matematica/analysis/taylor-series.md
       - Série de Fourier: matematica/analysis/fourier-series.md

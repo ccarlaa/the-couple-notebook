@@ -4,9 +4,9 @@ Uma **projeção** em Álgebra Linear é um operador linear que “projeta” ve
 
 ---
 
-## 1. Projeção Linear Geral
+## 1. Projeção Linear
 
-Seja $(V,K,+,\cdot)$ um espaço vetorial e $P\colon V\to V$ uma aplicação linear. Dizemos que $P$ é uma **projeção** se, e somente se,
+Seja $(V,K,+,\cdot)$ um espaço vetorial pré-Hilbertiano e $P\colon V\to V$ uma aplicação linear. Dizemos que $P$ é uma **projeção** se, e somente se,
 
 $$
 P^2 = P,
@@ -16,6 +16,12 @@ isto é,
 
 $$
 \forall v\in V,\quad P\bigl(P(v)\bigr) = P(v).
+$$
+
+E definimos a projeção de $w$ em $v \ne 0$ por:
+
+$$
+  P_v(w) :=\, \frac{\langle w, v \rangle}{\|v\|^2}\, v
 $$
 
 **Propriedades equivalentes**:
@@ -57,7 +63,7 @@ $$
 
 ## 2. Projeção Ortogonal em Espaço com Produto Interno
 
-Se $V$ é um espaço vetorial sobre $K$ dotado de um **produto interno** $\langle\cdot,\cdot\rangle$, e $W\subseteq V$ é um subespaço (finito gerado), a **projeção ortogonal** de $v\in V$ sobre $W$ é o vetor $P_W(v)\in W$ tal que
+Se $V$ é um espaço vetorial sobre $\mathbb{K}$ dotado de um **produto interno** $\langle\cdot,\cdot\rangle$, e $W\subseteq V$ é um subespaço (finito gerado), a **projeção ortogonal** de $v\in V$ sobre $W$ é o vetor $P_W(v)\in W$ tal que
 
 1. $v - P_W(v)$ pertence ao **ortogonal** $W^\perp$, i.e.
    $\langle v - P_W(v), w\rangle = 0$ para todo $w\in W$.
@@ -66,15 +72,12 @@ Se $V$ é um espaço vetorial sobre $K$ dotado de um **produto interno** $\langl
 
 ### 2.1. Fórmula em base ortonormal
 
-Se $\{e_1,\dots,e_k\}$ é uma base **ortonormal** de $W$, então para todo $v\in V$:
+Se $\{b_1,\dots,b_N\}$ é uma base **ortonormal** de $V$, então para todo $v\in V$:
 
 $$
-P_W(v)
-= \sum_{i=1}^{k} \langle v,\,e_i\rangle\,e_i.
+v
+= \sum_{i=1}^{N} P_{w_i}(v).
 $$
-
-Nesse caso, $P_W$ satisfaz $P_W^2 = P_W$ e é **autoadjunto** ($P_W = P_W^*$).
-
 ---
 
 ## 3. Exemplos

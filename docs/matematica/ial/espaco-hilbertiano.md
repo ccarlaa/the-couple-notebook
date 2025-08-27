@@ -19,7 +19,7 @@ Para todo Espaço Hilbertiano $V$.
 A norma satisfaz a **Desigualdade de Cauchy-Schwarz**:
 
 $$
-\forall v, w \in \mathcal{H}\,, \quad |\langle x, y \rangle|\; \leq\; \|x\| \cdot \|y\|.
+\forall v, w \in \mathcal{H}\,, \quad |\langle v, w \rangle|\; \leq\; \|v\| \cdot \|w\|.
 $$
 
 E a **Desigualdade Triangular**:
